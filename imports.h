@@ -64,6 +64,26 @@ char k_near_class[50] = "from sklearn.neighbors import KNeighborsClassifier";
 
 char k_near_reg[50] = "from sklearn.neighbors import KNeighborsRegressor";
 
+// lasso
+
+char lasso[50] = "from sklearn.linear_model import Lasso";
+
+//  elastic net
+
+char elastic[50] = "from sklearn.linear_model import ElasticNet";
+
+// svr
+
+char svr[30] = "from sklearn.svm import SVR";
+
+// svm
+
+char svm[40] = "from sklearn.svm import SVC";
+
+// mlp
+
+char mlp[50] = "from sklearn.neural_network import MLPClassifier";
+
 // lowercase func
 
 extern void lower(char *str);
