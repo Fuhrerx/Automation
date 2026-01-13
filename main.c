@@ -21,16 +21,19 @@ int main()
     if (result == 0)
     {
         printf("Directory '%s' created successfully.\n", dir_name);
+        printf("\n");
     }
     else
     {
         if (errno == EEXIST)
         {
             printf("Directory '%s' already exists.\n", dir_name);
+            printf("\n");
         }
         else
         {
             perror("Error creating directory");
+            printf("\n");
         }
     }
 
@@ -39,6 +42,7 @@ int main()
     if (fp == NULL)
     {
         printf("Error opening file with relative path: %s\n", strerror(errno));
+        printf("\n");
     }
     else
     {
@@ -52,11 +56,16 @@ int main()
         fprintf(fp, "\n");
         fprintf(fp, tts);
         fprintf(fp, "\n");
+        fprintf(fp, as);
+        fprintf(fp, "\n");
 
         ask_sns();
         ask_model();
 
+        printf("\n");
         printf("File written successfully at %s\n", relative_path);
+        printf("\n");
+
         fclose(fp);
     }
 
@@ -67,7 +76,7 @@ void ask_sns()
 {
     char ans[4];
 
-    printf("Do you want seaborn library? (yes/no) : ");
+    printf("\nDo you want seaborn library? (yes/no) : \n");
     scanf("%s", ans);
 
     lower(ans);
@@ -77,15 +86,23 @@ void ask_sns()
         fprintf(fp, sns);
         fprintf(fp, "\n");
     }
+    else if (strcmp(ans, "no") == 0)
+    {
+        printf("seaborn has not been imported!\n");
+    }
+    else
+    {
+        printf("invalid, seaborn not imported : restart the program to change\n");
+    }
 }
 
 void ask_model()
 {
     int ans1;
 
-    printf("What model are you planning to use : \n");
-    printf("Linear Regresssion (1)\nLogistic Regression (2)\nDecision Trees classifier (3)\nDecision Tree regressor (4)\nXGBoost classifier (5)\nXGBoost regressor (6)\n");
-    printf("Choose : ");
+    printf("\nWhat model are you planning to use : \n");
+    printf("Linear Regresssion (1)\nLogistic Regression (2)\nDecision Trees classifier (3)\nDecision Tree regressor (4)\nXGBoost classifier (5)\nXGBoost regressor (6)\nRidge regressor (7)\nRandom Forest classifier (8)\nRandom Forest regressor (9)\nK means clustering (10)\nK nearest neighbors classifier (11)\nK neareast neighbors (12)\n");
+    printf("Choose : \n");
     scanf("%d", &ans1);
 
     switch (ans1)
@@ -93,10 +110,14 @@ void ask_model()
     case 1:
         fprintf(fp, sk_lin);
         fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
+        fprintf(fp, "\n");
         break;
 
     case 2:
         fprintf(fp, sk_log);
+        fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
         fprintf(fp, "\n");
         break;
 
@@ -108,6 +129,8 @@ void ask_model()
     case 4:
         fprintf(fp, sk_dec_reg);
         fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
+        fprintf(fp, "\n");
         break;
 
     case 5:
@@ -117,6 +140,44 @@ void ask_model()
 
     case 6:
         fprintf(fp, xgboost_reg);
+        fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
+        fprintf(fp, "\n");
+        break;
+
+    case 7:
+        fprintf(fp, sk_lin_ridge);
+        fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
+        fprintf(fp, "\n");
+        break;
+
+    case 8:
+        fprintf(fp, ran_for_class);
+        fprintf(fp, "\n");
+        break;
+
+    case 9:
+        fprintf(fp, ran_for_reg);
+        fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
+        fprintf(fp, "\n");
+        break;
+
+    case 10:
+        fprintf(fp, k_means_cluster);
+        fprintf(fp, "\n");
+        break;
+
+    case 11:
+        fprintf(fp, k_near_class);
+        fprintf(fp, "\n");
+        break;
+
+    case 12:
+        fprintf(fp, k_near_reg);
+        fprintf(fp, "\n");
+        fprintf(fp, mse_r2);
         fprintf(fp, "\n");
         break;
 
