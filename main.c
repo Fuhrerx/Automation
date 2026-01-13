@@ -11,7 +11,7 @@ int main()
 {
     FILE *fp;
     const char *dir_name = "python_automation";
-    const char *relative_path = "python_automation/main.ipynb";
+    const char *relative_path = "python_automation/main.py";
     int result = _mkdir(dir_name);
 
     if (result == 0)
@@ -38,11 +38,10 @@ int main()
     }
     else
     {
-        fclose(fp);
+        fprintf(fp, sns);
         printf("File written successfully at %s\n", relative_path);
+        fclose(fp);
     }
-
-    fprintf(fp, sns);
 
     return 0;
 }
