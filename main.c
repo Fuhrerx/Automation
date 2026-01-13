@@ -7,9 +7,12 @@
 
 #include "imports.h"
 
+FILE *fp;
+
+void ask_sns();
+
 int main()
 {
-    FILE *fp;
     const char *dir_name = "python_automation";
     const char *relative_path = "python_automation/main.py";
     int result = _mkdir(dir_name);
@@ -38,10 +41,38 @@ int main()
     }
     else
     {
-        fprintf(fp, sns);
+        fprintf(fp, pd);
+        fprintf(fp, "\n");
+        fprintf(fp, np);
+        fprintf(fp, "\n");
+        fprintf(fp, torch);
+        fprintf(fp, "\n");
+        fprintf(fp, plt);
+        fprintf(fp, "\n");
+        fprintf(fp, tts);
+        fprintf(fp, "\n");
+
+        ask_sns();
+
         printf("File written successfully at %s\n", relative_path);
         fclose(fp);
     }
 
     return 0;
+}
+
+void ask_sns()
+{
+    char ans[4];
+
+    printf("Do you want seaborn library? (yes/no) : ");
+    scanf("%s", ans);
+
+    lower(ans);
+
+    if (strcmp(ans, "yes") == 0)
+    {
+        fprintf(fp, sns);
+        fprintf(fp, "\n");
+    }
 }
