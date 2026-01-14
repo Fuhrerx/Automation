@@ -15,13 +15,18 @@ int main()
     {
         printf("Error opening file with relative path: %s\n", strerror(errno));
         printf("\n");
+
+        return EXIT_FAILURE;
     }
     else
     {
+        libs();
         base_imports();
         ask_torch();
         ask_sns();
         ask_model();
+        read_csv();
+        read_csv_file();
 
         printf("\n");
         printf("File written successfully at %s\n", relative_path);
@@ -30,7 +35,6 @@ int main()
         fclose(fp);
 
         return EXIT_SUCCESS;
-        exit(0);
     }
 
     return 0;
