@@ -8,7 +8,7 @@
 #include <string.h>
 
 #include "imports.h"
-#include "cells.h"
+#include "markdown.h"
 
 FILE *fp;
 
