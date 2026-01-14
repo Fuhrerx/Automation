@@ -30,6 +30,7 @@ int main()
         fclose(fp);
 
         return EXIT_SUCCESS;
+        exit(0);
     }
 
     return 0;
