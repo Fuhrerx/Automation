@@ -16,19 +16,21 @@ const char MAIN_HEAD[7] = "# ###";
 const char SUB_HEAD[5] = "# ##";
 const char CELL[10] = "# %%%%";
 const char CELL_MARKDOWN[20] = "# %%%%[markdown]";
-const char BOLD[5] = " **";
+const char L_BOLD[5] = " **";
+const char R_BOLD[5] = "**";
 
 void m_libs();
 void m_read_csv();
+void m_plot();
 
 void m_libs()
 {
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");
     fprintf(fp, SUB_HEAD);
-    fprintf(fp, BOLD);
+    fprintf(fp, L_BOLD);
     fprintf(fp, "Importing Libraries/Frameworks");
-    fprintf(fp, BOLD);
+    fprintf(fp, R_BOLD);
     fprintf(fp, "\n");
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -39,9 +41,22 @@ void m_read_csv()
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");
     fprintf(fp, SUB_HEAD);
-    fprintf(fp, BOLD);
+    fprintf(fp, L_BOLD);
     fprintf(fp, "Reading CSV file");
-    fprintf(fp, BOLD);
+    fprintf(fp, R_BOLD);
+    fprintf(fp, "\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+}
+
+void m_plot()
+{
+    fprintf(fp, CELL_MARKDOWN);
+    fprintf(fp, "\n");
+    fprintf(fp, SUB_HEAD);
+    fprintf(fp, L_BOLD);
+    fprintf(fp, "Plotting And EDA");
+    fprintf(fp, R_BOLD);
     fprintf(fp, "\n");
     fprintf(fp, CELL);
     fprintf(fp, "\n");

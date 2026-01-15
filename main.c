@@ -23,10 +23,14 @@ int main(int argc, char *argv[])
         m_libs();
         base_imports();
         ask_torch();
-        ask_sns();
         ask_model();
         m_read_csv();
         read_csv_file();
+        drop();
+        m_plot();
+        hist();
+        corr();
+        heatmap();
 
         printf("\n");
         printf("File written successfully at %s\n", relative_path);

@@ -14,6 +14,10 @@
 FILE *fp;
 
 void read_csv_file();
+void drop();
+void hist();
+void corr();
+void heatmap();
 
 void read_csv_file()
 {
@@ -27,5 +31,62 @@ void read_csv_file()
     fprintf(fp, CELL);
     fprintf(fp, "\ndf.info()\n");
     fprintf(fp, CELL);
-    fprintf(fp, "\ndf.describe()");
+    fprintf(fp, "\ndf.describe()\n");
+}
+
+void drop()
+{
+    int n;
+    char cols[25];
+
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+
+    printf("Enter the no of columns to drop : ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        printf("Enter the column name : ");
+        scanf("%s", &cols);
+
+        fprintf(fp, "df = df.drop(columns= \"%s\", axis= 1, inplace = true)\n", cols);
+    }
+}
+
+void hist()
+{
+    int n;
+    char cols[25];
+
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+
+    printf("Enter the no of columns to plot a histogram : ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        printf("Enter the column name : ");
+        scanf("%s", &cols);
+
+        fprintf(fp, "df.hist(\"%s\")\n", cols);
+        fprintf(fp, "plt.show\n");
+    }
+}
+
+void corr()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "corr = df.corr()\n");
+    fprintf(fp, "corr\n");
+}
+
+void heatmap()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "sns.heatmap(corr, cmap='Blues', annot=True)\n");
+    fprintf(fp, "plt.show\n");
 }
