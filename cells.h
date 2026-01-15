@@ -18,6 +18,7 @@ void drop();
 void hist();
 void corr();
 void heatmap();
+void pairplot();
 
 void read_csv_file()
 {
@@ -50,7 +51,7 @@ void drop()
         printf("Enter the column name : ");
         scanf("%s", &cols);
 
-        fprintf(fp, "df = df.drop(columns= \"%s\", axis= 1, inplace = true)\n", cols);
+        fprintf(fp, "df = df.drop(columns= \"%s\", axis= 1, inplace = True)\n", cols);
     }
 }
 
@@ -89,4 +90,29 @@ void heatmap()
     fprintf(fp, "\n");
     fprintf(fp, "sns.heatmap(corr, cmap='Blues', annot=True)\n");
     fprintf(fp, "plt.show\n");
+}
+
+void pairplot()
+{
+    typedef struct
+    {
+        char col_entry[25];
+    } cols;
+
+    int n;
+    cols col[6];
+
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+
+    printf("Enter the no of columns for pairplot : ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        printf("Enter the coulmn name(s) for pairplot : ");
+        scanf("%s", &col);
+
+        fprintf(fp, "df_numrc = df[[\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\"]]", col);
+    }
 }

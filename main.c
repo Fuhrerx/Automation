@@ -1,3 +1,11 @@
+//
+// Copyright Akshay Babu (c) 2026, All rights reserved.
+// This is : Build v1.2.5(beta), since its open source any edits or
+// alterations are allowed by the author for code resusablility
+// and workflow automation, please feel free to edit or report any
+// issues.
+//
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -31,6 +39,7 @@ int main(int argc, char *argv[])
         hist();
         corr();
         heatmap();
+        // pairplot(); // Currently only supports 6 column entries
 
         printf("\n");
         printf("File written successfully at %s\n", relative_path);

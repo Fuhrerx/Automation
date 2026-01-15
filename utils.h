@@ -56,36 +56,12 @@ void base_imports()
     fprintf(fp, "\n");
     fprintf(fp, plt);
     fprintf(fp, "\n");
+    fprintf(fp, sns);
+    fprintf(fp, "\n");
     fprintf(fp, tts);
     fprintf(fp, "\n");
     fprintf(fp, as);
     fprintf(fp, "\n");
-}
-
-void ask_sns()
-{
-    char ans[4];
-
-    printf("\nDo you want seaborn library? (yes/no) : \n");
-    scanf("%s", ans);
-
-    lower(ans);
-
-    if (strcmp(ans, "yes") == 0)
-    {
-        fprintf(fp, sns);
-        fprintf(fp, "\n");
-    }
-    else if (strcmp(ans, "no") == 0)
-    {
-        printf("seaborn has not been imported!\n");
-    }
-    else
-    {
-        system("cls");
-        printf("invalid, seaborn not imported : select again\n");
-        ask_sns();
-    }
 }
 
 void ask_torch()

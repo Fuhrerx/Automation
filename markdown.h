@@ -58,6 +58,4 @@ void m_plot()
     fprintf(fp, "Plotting And EDA");
     fprintf(fp, R_BOLD);
     fprintf(fp, "\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
 }
