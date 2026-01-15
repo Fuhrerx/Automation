@@ -89,7 +89,7 @@ void heatmap()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
     fprintf(fp, "sns.heatmap(corr, cmap='Blues', annot=True)\n");
-    fprintf(fp, "plt.show\n");
+    fprintf(fp, "plt.show");
 }
 
 void pairplot()
@@ -100,7 +100,7 @@ void pairplot()
     } cols;
 
     int n;
-    cols col[6];
+    cols col[n];
 
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -113,6 +113,6 @@ void pairplot()
         printf("Enter the coulmn name(s) for pairplot : ");
         scanf("%s", &col);
 
-        fprintf(fp, "df_numrc = df[[\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\"]]", col);
+        fprintf(fp, "df_numrc = df[[\"%s\"]]", col);
     }
 }

@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         hist();
         corr();
         heatmap();
-        // pairplot(); // Currently only supports 6 column entries
+        // pairplot(); // TODO : Do not uncomment!
 
         printf("\n");
         printf("File written successfully at %s\n", relative_path);
