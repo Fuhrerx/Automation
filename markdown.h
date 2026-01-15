@@ -18,10 +18,10 @@ const char CELL[10] = "# %%%%";
 const char CELL_MARKDOWN[20] = "# %%%%[markdown]";
 const char BOLD[5] = " **";
 
-void libs();
-void read_csv();
+void m_libs();
+void m_read_csv();
 
-void libs()
+void m_libs()
 {
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");
@@ -34,7 +34,7 @@ void libs()
     fprintf(fp, "\n");
 }
 
-void read_csv()
+void m_read_csv()
 {
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");

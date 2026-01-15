@@ -20,12 +20,12 @@ int main()
     }
     else
     {
-        libs();
+        m_libs();
         base_imports();
         ask_torch();
         ask_sns();
         ask_model();
-        read_csv();
+        m_read_csv();
         read_csv_file();
 
         printf("\n");

@@ -9,6 +9,7 @@
 
 #include "imports.h"
 #include "markdown.h"
+#include "cells.h"
 
 FILE *fp;
 
@@ -20,7 +21,6 @@ void base_imports();
 void ask_torch();
 void ask_sns();
 void ask_model();
-void read_csv_file();
 
 void dir_check()
 {
@@ -259,19 +259,4 @@ void ask_model()
         printf("invalid input, please select again\n");
         ask_model();
     }
-}
-
-void read_csv_file()
-{
-    char csv_dir[200];
-
-    printf("Enter the directory of the CSV file : ");
-    scanf("%s", csv_dir);
-
-    fprintf(fp, "df = pd.read_csv(r\"%s\")\n", csv_dir);
-    fprintf(fp, "df\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\ndf.info()\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\ndf.describe()");
 }
