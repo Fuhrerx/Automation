@@ -11,18 +11,18 @@
 #include "markdown.h"
 #include "cells.h"
 
-FILE *fp;
+extern FILE *fp;
 
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
-void dir_check();
-void base_imports();
-void ask_torch();
-void ask_sns();
-void ask_model();
+extern void dir_check();
+extern void base_imports();
+extern void ask_torch();
+extern void ask_sns();
+extern void ask_model();
 
-void dir_check()
+extern void dir_check()
 {
     int result = _mkdir(dir_name);
 
@@ -48,7 +48,7 @@ void dir_check()
     fp = fopen(relative_path, "w");
 }
 
-void base_imports()
+extern void base_imports()
 {
     fprintf(fp, pd);
     fprintf(fp, "\n");
@@ -64,7 +64,7 @@ void base_imports()
     fprintf(fp, "\n");
 }
 
-void ask_torch()
+extern void ask_torch()
 {
     char ans[4];
 
@@ -90,7 +90,7 @@ void ask_torch()
     }
 }
 
-void ask_model()
+extern void ask_model()
 {
     int ans1;
     int model;

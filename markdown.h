@@ -19,11 +19,11 @@ const char CELL_MARKDOWN[20] = "# %%%%[markdown]";
 const char L_BOLD[5] = " **";
 const char R_BOLD[5] = "**";
 
-void m_libs();
-void m_read_csv();
-void m_plot();
+extern void m_libs();
+extern void m_read_csv();
+extern void m_plot();
 
-void m_libs()
+extern void m_libs()
 {
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");
@@ -36,7 +36,7 @@ void m_libs()
     fprintf(fp, "\n");
 }
 
-void m_read_csv()
+extern void m_read_csv()
 {
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");
@@ -49,7 +49,7 @@ void m_read_csv()
     fprintf(fp, "\n");
 }
 
-void m_plot()
+extern void m_plot()
 {
     fprintf(fp, CELL_MARKDOWN);
     fprintf(fp, "\n");
