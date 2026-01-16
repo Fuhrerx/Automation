@@ -10,6 +10,7 @@
 #include "imports.h"
 #include "markdown.h"
 #include "cells.h"
+#include "PyList.h"
 
 extern FILE *fp;
 
