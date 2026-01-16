@@ -10,6 +10,7 @@
 #include "utils.h"
 #include "imports.h"
 #include "markdown.h"
+#include "PyList.h"
 
 FILE *fp;
 
@@ -120,10 +121,11 @@ extern void pairplot()
 
 extern void model()
 {
+
     fprintf(fp, CELL);
     fprintf(fp, "\n");
-    fprintf(fp, "X = df[[]]         #add values to train/test\n");
-    fprintf(fp, "y = df[[]]         #add values to train\n");
+    list_model_X();
+    list_model_y();
     fprintf(fp, "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=42)\n");
     fprintf(fp, CELL);
     fprintf(fp, "\n");
