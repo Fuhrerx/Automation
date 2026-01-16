@@ -40,6 +40,8 @@ int main(int argc, char *argv[])
         corr();
         heatmap();
         // pairplot(); // TODO : Do not uncomment!
+        m_model_build();
+        model();
 
         printf("\n");
         printf("File written successfully at %s\n", relative_path);
