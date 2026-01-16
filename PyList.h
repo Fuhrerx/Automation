@@ -12,10 +12,10 @@
 
 FILE *fp;
 
-void list_model_X();
-void list_model_y();
+extern void list_model_X();
+extern void list_model_y();
 
-void list_model_X()
+extern void list_model_X()
 {
     int n, i;
     printf("Enter the number of list elements to store on X train/test : ");
@@ -41,7 +41,7 @@ void list_model_X()
     fprintf(fp, "]]\n");
 }
 
-void list_model_y()
+extern void list_model_y()
 {
     int n, i;
     printf("Enter the number of list elements to store on y train/test : ");
