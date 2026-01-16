@@ -10,37 +10,59 @@
 #include "utils.h"
 #include "imports.h"
 
-void list();
+FILE *fp;
 
-void list()
+void list_model_X();
+void list_model_y();
+
+void list_model_X()
 {
     int n, i;
-    printf("Enter the number of list elements to store : ");
+    printf("Enter the number of list elements to store on X train/test : ");
     scanf("%d", &n);
 
-    char *values = (char *)malloc(n * sizeof(char));
-    if (values == NULL)
-    {
-        printf("Memory allocation failed\n");
-    }
+    char values[n][25];
 
     printf("Enter %d list elements : \n", n);
     for (i = 0; i < n; ++i)
     {
-        scanf("%s", &values[i]);
+        scanf("%s", values[i]);
     }
 
-    printf("Displaying integers in array (like Python list format):\n");
-    printf("[");
+    fprintf(fp, "X = df[[");
     for (i = 0; i < n; ++i)
     {
-        printf("%s", values[i]);
+        fprintf(fp, "\"%s\"", values[i]);
         if (i < n - 1)
         {
-            printf(", ");
+            fprintf(fp, ", ");
         }
     }
-    printf("]\n");
+    fprintf(fp, "]]\n");
+}
 
-    free(values);
+void list_model_y()
+{
+    int n, i;
+    printf("Enter the number of list elements to store on y train/test : ");
+    scanf("%d", &n);
+
+    char values[n][25];
+
+    printf("Enter %d list elements : \n", n);
+    for (i = 0; i < n; ++i)
+    {
+        scanf("%s", values[i]);
+    }
+
+    fprintf(fp, "y = df[[");
+    for (i = 0; i < n; ++i)
+    {
+        fprintf(fp, "\"%s\"", values[i]);
+        if (i < n - 1)
+        {
+            fprintf(fp, ", ");
+        }
+    }
+    fprintf(fp, "]]\n");
 }
