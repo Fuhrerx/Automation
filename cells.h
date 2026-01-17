@@ -26,7 +26,7 @@ extern void log_transform();
 extern void corr();
 extern void heatmap();
 extern void pairplot();
-extern void model();
+extern void model_build();
 extern void model_eval();
 
 extern void read_csv_file()
@@ -85,7 +85,7 @@ extern void hist()
     }
 }
 
-extern void log_transform()
+extern void log_transform() // TODO : log transform if regression based model
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -116,7 +116,7 @@ extern void pairplot()
     fprintf(fp, "sns.pairplot(df_numrc, kind='scatter', plot_kws={'alpha': 0.4})");
 }
 
-extern void model()
+extern void model_build()
 {
 
     fprintf(fp, CELL);
@@ -136,8 +136,29 @@ extern void model()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
     fprintf(fp, "y_test\n");
+
+    if (model == 1)
+    {
+        switch (ans_reg)
+        {
+        case 1:
+            r_lin_reg();
+            break;
+
+        default:
+            break;
+        }
+    }
 }
 
 extern void model_eval()
 {
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "train_mse = mean_squared_error(y_train, y_pred)\n");
+    fprintf(fp, "train_mse\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "train_r2 = r2_score(y_train, y_pred)\n");
+    fprintf(fp, "train_r2\n");
 }
