@@ -1,3 +1,7 @@
+//
+// Please follow m_(fnuc name) naming markdown functions
+//
+
 #pragma once
 
 #include <stdio.h>
@@ -23,6 +27,7 @@ extern void m_libs();
 extern void m_read_csv();
 extern void m_plot();
 extern void m_model_build();
+extern void m_model_evaluation();
 
 extern void m_libs()
 {
@@ -68,6 +73,17 @@ extern void m_model_build()
     fprintf(fp, SUB_HEAD);
     fprintf(fp, L_BOLD);
     fprintf(fp, "Building Model");
+    fprintf(fp, R_BOLD);
+    fprintf(fp, "\n");
+}
+
+extern void m_model_evaluation()
+{
+    fprintf(fp, CELL_MARKDOWN);
+    fprintf(fp, "\n");
+    fprintf(fp, SUB_HEAD);
+    fprintf(fp, L_BOLD);
+    fprintf(fp, "Evaluating model");
     fprintf(fp, R_BOLD);
     fprintf(fp, "\n");
 }
