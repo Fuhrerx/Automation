@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 
         m_model_build();
 
-        model();
+        model_build();
 
         m_model_evaluation();
 
