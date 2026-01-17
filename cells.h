@@ -22,16 +22,18 @@ typedef struct
 extern void read_csv_file();
 extern void drop();
 extern void hist();
+extern void log_transform();
 extern void corr();
 extern void heatmap();
 extern void pairplot();
 extern void model();
+extern void model_eval();
 
 extern void read_csv_file()
 {
     char csv_dir[200];
 
-    printf("Enter the directory of the CSV file : ");
+    printf("\nEnter the directory of the CSV file : \n");
     scanf("%s", csv_dir);
 
     fprintf(fp, "df = pd.read_csv(r\"%s\")\n", csv_dir);
@@ -50,12 +52,12 @@ extern void drop()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
 
-    printf("Enter the no of columns to drop : ");
+    printf("\nEnter the no of columns to drop (type 0 if none): \n");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++)
     {
-        printf("Enter the column name : ");
+        printf("\nEnter the column name : \n");
         scanf("%s", &cols);
 
         fprintf(fp, "df = df.drop(columns= \"%s\", axis= 1, inplace = True)\n", cols);
@@ -70,17 +72,23 @@ extern void hist()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
 
-    printf("Enter the no of columns to plot a histogram : ");
+    printf("\nEnter the no of columns to plot a histogram : \n");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++)
     {
-        printf("Enter the column name : ");
+        printf("\nEnter the column name : \n");
         scanf("%s", &cols);
 
         fprintf(fp, "df.hist(\"%s\")\n", cols);
         fprintf(fp, "plt.show\n");
     }
+}
+
+extern void log_transform()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
 }
 
 extern void corr()
@@ -101,22 +109,11 @@ extern void heatmap()
 
 extern void pairplot()
 {
-    int n;
-    cols col[n];
-
     fprintf(fp, CELL);
     fprintf(fp, "\n");
 
-    printf("Enter the no of columns for pairplot : ");
-    scanf("%d", &n);
-
-    for (int i = 1; i <= n; i++)
-    {
-        printf("Enter the coulmn name(s) for pairplot : ");
-        scanf("%s", &col);
-
-        fprintf(fp, "df_numrc = df[[\"%s\"]]", col);
-    }
+    list_pairplot();
+    fprintf(fp, "sns.pairplot(df_numrc, kind='scatter', plot_kws={'alpha': 0.4})");
 }
 
 extern void model()
@@ -139,4 +136,8 @@ extern void model()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
     fprintf(fp, "y_test\n");
+}
+
+extern void model_eval()
+{
 }
