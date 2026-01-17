@@ -29,19 +29,19 @@ extern void dir_check()
 
     if (result == 0)
     {
-        printf("Directory '%s' created successfully.\n", dir_name);
+        printf("\nDirectory '%s' created successfully.\n", dir_name);
         printf("\n");
     }
     else
     {
         if (errno == EEXIST)
         {
-            printf("Directory '%s' already exists.\n", dir_name);
+            printf("\nDirectory '%s' already exists.\n", dir_name);
             printf("\n");
         }
         else
         {
-            perror("Error creating directory");
+            perror("\nError creating directory");
             printf("\n");
         }
     }
@@ -81,12 +81,12 @@ extern void ask_torch()
     }
     else if (strcmp(ans, "no") == 0)
     {
-        printf("PyTorch has not been imported!\n");
+        printf("\nPyTorch has not been imported!\n");
     }
     else
     {
         system("cls");
-        printf("invalid, PyTorch not imported : select again\n");
+        printf("\ninvalid, PyTorch not imported : select again\n");
         ask_torch();
     }
 }
@@ -98,6 +98,7 @@ extern void ask_model()
 
     printf("\nWhat kind of model are you gonna use : \n");
     printf("Regression (1)\nClassification (2)\n");
+    printf("Choose : \n");
     scanf("%d", &model);
 
     if (model == 1)
