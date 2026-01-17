@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     if (fp == NULL)
     {
-        printf("Error opening file with relative path: %s\n", strerror(errno));
+        printf("\nError opening file with relative path: %s\n", strerror(errno));
         printf("\n");
 
         return EXIT_FAILURE;
@@ -29,22 +29,31 @@ int main(int argc, char *argv[])
     else
     {
         m_libs();
+
         base_imports();
         ask_torch();
         ask_model();
+
         m_read_csv();
+
         read_csv_file();
         drop();
+
         m_plot();
+
         hist();
         corr();
         heatmap();
-        // pairplot(); // TODO : Do not uncomment!
+        pairplot();
+
         m_model_build();
+
         model();
 
+        m_model_evaluation();
+
         printf("\n");
-        printf("File written successfully at %s\n", relative_path);
+        printf("File written successfully at %s", relative_path);
         printf("\n");
 
         fclose(fp);
