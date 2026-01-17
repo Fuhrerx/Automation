@@ -1,3 +1,7 @@
+//
+// Use list_(func name) naming for pylist creation
+//
+
 #pragma once
 
 #include <stdio.h>
@@ -12,18 +16,72 @@
 
 FILE *fp;
 
+extern void list_log();
+extern void list_pairplot();
 extern void list_model_X();
 extern void list_model_y();
 
-extern void list_model_X()
+extern void list_log()
 {
     int n, i;
-    printf("Enter the number of list elements to store on X train/test : ");
+    printf("Enter the number of list elements to log transform : ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("Enter %d list elements : \n", n);
+    printf("\nEnter %d list elements : \n", n);
+    for (i = 0; i < n; ++i)
+    {
+        scanf("%s", values[i]);
+    }
+
+    fprintf(fp, "df_numrc = df[[");
+    for (i = 0; i < n; ++i)
+    {
+        fprintf(fp, "\"%s\"", values[i]);
+        if (i < n - 1)
+        {
+            fprintf(fp, ", ");
+        }
+    }
+    fprintf(fp, "]]\n");
+}
+
+extern void list_pairplot()
+{
+    int n, i;
+    printf("\nEnter the number of list elements to store on pairplot : ");
+    scanf("%d", &n);
+
+    char values[n][25];
+
+    printf("\nEnter %d list elements : \n", n);
+    for (i = 0; i < n; ++i)
+    {
+        scanf("%s", values[i]);
+    }
+
+    fprintf(fp, "df_numrc = df[[");
+    for (i = 0; i < n; ++i)
+    {
+        fprintf(fp, "\"%s\"", values[i]);
+        if (i < n - 1)
+        {
+            fprintf(fp, ", ");
+        }
+    }
+    fprintf(fp, "]]\n");
+}
+
+extern void list_model_X()
+{
+    int n, i;
+    printf("\nEnter the number of list elements to store on X train/test : ");
+    scanf("%d", &n);
+
+    char values[n][25];
+
+    printf("\nEnter %d list elements : \n", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
@@ -44,12 +102,12 @@ extern void list_model_X()
 extern void list_model_y()
 {
     int n, i;
-    printf("Enter the number of list elements to store on y train/test : ");
+    printf("\nEnter the number of list elements to store on y train/test : ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("Enter %d list elements : \n", n);
+    printf("\nEnter %d list elements : \n", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
