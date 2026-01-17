@@ -7,12 +7,11 @@
 #include <errno.h>
 #include <string.h>
 
-#include "imports.h"
-#include "markdown.h"
-#include "cells.h"
-#include "PyList.h"
-
 extern FILE *fp;
+
+int ans_reg;
+int ans_class;
+int model;
 
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
@@ -22,6 +21,13 @@ extern void base_imports();
 extern void ask_torch();
 extern void ask_sns();
 extern void ask_model();
+void lin_reg();
+
+#include "imports.h"
+#include "markdown.h"
+#include "models.h"
+#include "cells.h"
+#include "PyList.h"
 
 extern void dir_check()
 {
@@ -93,9 +99,6 @@ extern void ask_torch()
 
 extern void ask_model()
 {
-    int ans1;
-    int model;
-
     printf("\nWhat kind of model are you gonna use : \n");
     printf("Regression (1)\nClassification (2)\n");
     printf("Choose : \n");
@@ -106,9 +109,9 @@ extern void ask_model()
         printf("\nWhat regression model are you planning to use : \n");
         printf("Linear Regresssion (1)\nLogistic Regression (2)\nDecision Tree regressor (3)\nXGBoost regressor (4)\nRidge regressor (5)\nRandom Forest regressor (6)\nK nearest regressor (7)\nLasso regression (8)\nElastic Net regression (9)\nSupport Vector Regression (10)\n");
         printf("Choose : \n");
-        scanf("%d", &ans1);
+        scanf("%d", &ans_reg);
 
-        switch (ans1)
+        switch (ans_reg)
         {
         case 1:
             fprintf(fp, sk_lin);
@@ -191,9 +194,9 @@ extern void ask_model()
         printf("\nWhat classification model are you planning to use : \n");
         printf("Support Vector Machines (1)\nDecision tree classifier (2)\nRandom forest classifier (3)\nK nearest neighbors (4)\nXGBoost classifier (5)\nNeural networks MLP (6)\n");
         printf("Choose : \n");
-        scanf("%d", &ans1);
+        scanf("%d", &ans_class);
 
-        switch (ans1)
+        switch (ans_class)
         {
         case 1:
             fprintf(fp, svm);
