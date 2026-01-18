@@ -145,6 +145,42 @@ extern void model_build()
             r_lin_reg();
             break;
 
+        case 2:
+            r_log_reg();
+            break;
+
+        case 3:
+            r_dec_tree_reg();
+            break;
+
+        case 4:
+            r_xgbooost_reg();
+            break;
+
+        case 5:
+            r_lin_ridge_reg();
+            break;
+
+        case 6:
+            r_ran_for_reg();
+            break;
+
+        case 7:
+            r_k_nearest_reg();
+            break;
+
+        case 8:
+            r_lasso_reg();
+            break;
+
+        case 9:
+            r_elastic_reg();
+            break;
+
+        case 10:
+            r_svr_reg();
+            break;
+
         default:
             break;
         }
