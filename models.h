@@ -27,6 +27,13 @@ extern void r_svr_reg();
 
 // classification models
 
+extern void c_svm_class();
+extern void c_dec_class();
+extern void c_ran_for_class();
+extern void c_k_near_class();
+extern void c_xgboost_class();
+extern void c_mlp_class();
+
 extern void r_lin_reg()
 {
     fprintf(fp, CELL);
@@ -149,6 +156,84 @@ extern void r_svr_reg()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
     fprintf(fp, "model = SVR()\n");
+    fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void c_svm_class()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = SVC()\n");
+    fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void c_dec_class()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = DecisionTreeClassifier()\n");
+    fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void c_ran_for_class()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = RandomForestClassifier()\n");
+    fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void c_k_near_class()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = KNeighborsClassifier()\n");
+    fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void c_xgboost_class()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = xgb.XGBClassifier()\n");
+    fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void c_mlp_class()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = MLPClassifier()\n");
     fprintf(fp, "model.fit(X_train, y_train)\n");
     fprintf(fp, "model.coef_\n");
     fprintf(fp, CELL);
