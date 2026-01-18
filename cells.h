@@ -182,6 +182,38 @@ extern void model_build()
             break;
 
         default:
+            system("cls");
+            printf("Not a valid model : choose again!");
+            model_build();
+            break;
+        }
+    }
+    else if (model == 2)
+    {
+        switch (ans_class)
+        {
+        case 1:
+            c_svm_class();
+            break;
+
+        case 2:
+            c_dec_class();
+            break;
+
+        case 3:
+            c_ran_for_class();
+            break;
+
+        case 4:
+            c_k_near_class();
+            break;
+
+        case 5:
+            c_xgboost_class();
+            break;
+
+        case 6:
+            c_mlp_class();
             break;
         }
     }
