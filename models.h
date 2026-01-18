@@ -33,4 +33,8 @@ void r_lin_reg()
     fprintf(fp, "model = LinearRegression()\n");
     fprintf(fp, "model.fit(X_train, y_train)\n");
     fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
 }
