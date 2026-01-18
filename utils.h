@@ -135,7 +135,7 @@ extern void ask_model()
             break;
 
         case 4:
-            fprintf(fp, xgboost_reg);
+            fprintf(fp, xgboost);
             fprintf(fp, "\n");
             fprintf(fp, mse_r2);
             fprintf(fp, "\n");
@@ -219,7 +219,7 @@ extern void ask_model()
             break;
 
         case 5:
-            fprintf(fp, xgboost_class);
+            fprintf(fp, xgboost);
             fprintf(fp, "\n");
             break;
 
