@@ -38,13 +38,9 @@ char sk_dec_class[50] = "from sklearn.tree import DecisionTreeClassifier";
 
 char sk_dec_reg[50] = "from sklearn.tree import DecisionTreeRegressor";
 
-// XGBoost class
+// XGBoost
 
-char xgboost_class[50] = "from xgboost import XGBClassifier";
-
-// XGBoost regressor
-
-char xgboost_reg[50] = "import xgboost as xgb";
+char xgboost[50] = "import xgboost as xgb";
 
 // random forest class
 
