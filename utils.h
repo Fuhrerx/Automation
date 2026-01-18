@@ -21,7 +21,7 @@ extern void base_imports();
 extern void ask_torch();
 extern void ask_sns();
 extern void ask_model();
-void lin_reg();
+extern void scaler();
 
 #include "imports.h"
 #include "markdown.h"
@@ -240,4 +240,13 @@ extern void ask_model()
         printf("invalid input, please select again\n");
         ask_model();
     }
+}
+
+extern void scaler() // TODO : DO NOT IMPLIMENT YET!
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "scaled_X_train = \n");
+    fprintf(fp, "scaled_y_train = \n");
+    fprintf(fp, "\n");
 }
