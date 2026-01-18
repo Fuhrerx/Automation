@@ -13,20 +13,21 @@ extern FILE *fp;
 
 // regression models
 
-void r_lin_reg();
-void r_log_reg();
-void r_dec_tree_reg();
-void r_xgbooost_reg();
-void r_lin_ridge_reg();
-void r_ran_for_reg();
-void r_k_nearest_reg();
-void r_lasso_reg();
-void r_elastic_reg();
-void r_svr_reg();
+extern void r_lin_reg();
+extern void r_log_reg();
+extern void r_dec_tree_reg();
+extern void r_xgbooost_reg();
+extern void r_lin_ridge_reg();
+extern void r_ran_for_reg();
+extern void r_k_nearest_reg();
+extern void r_lasso_reg();
+extern void r_elastic_reg();
+extern void r_elastic_reg();
+extern void r_svr_reg();
 
 // classification models
 
-void r_lin_reg()
+extern void r_lin_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -39,7 +40,7 @@ void r_lin_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_log_reg()
+extern void r_log_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -52,7 +53,7 @@ void r_log_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_dec_tree_reg()
+extern void r_dec_tree_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -65,7 +66,7 @@ void r_dec_tree_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_xgbooost_reg()
+extern void r_xgbooost_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -78,7 +79,7 @@ void r_xgbooost_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_lin_ridge_reg()
+extern void r_lin_ridge_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -91,7 +92,7 @@ void r_lin_ridge_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_ran_for_reg()
+extern void r_ran_for_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -104,7 +105,7 @@ void r_ran_for_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_k_nearest_reg()
+extern void r_k_nearest_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -117,7 +118,7 @@ void r_k_nearest_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_lasso_reg()
+extern void r_lasso_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -130,7 +131,7 @@ void r_lasso_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_elastic_reg()
+extern void r_elastic_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
@@ -143,7 +144,7 @@ void r_elastic_reg()
     fprintf(fp, "y_pred\n");
 }
 
-void r_svr_reg()
+extern void r_svr_reg()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
