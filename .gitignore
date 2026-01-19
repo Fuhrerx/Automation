@@ -11,3 +11,4 @@ python_automation/
 *.py
 *.ipynb
 .vscode
+.venv
