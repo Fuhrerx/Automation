@@ -10,3 +10,4 @@ python_automation/
 # files
 *.py
 *.ipynb
+.vscode
