@@ -215,6 +215,11 @@ extern void model_build()
         case 6:
             c_mlp_class();
             break;
+
+        default:
+            system("cls");
+            printf("invalid input, please input again");
+            model_build();
         }
     }
 }
