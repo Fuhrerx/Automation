@@ -1,6 +1,6 @@
 //
 // Copyright Akshay Babu (c) 2026, All rights reserved.
-// This is : Build v1.2.5(beta), since its open source any edits or
+// This is : Build v1.3.0(beta), since its open source any edits or
 // alterations are allowed by the author for code resusablility
 // and workflow automation, please feel free to edit or report any
 // issues.
@@ -17,8 +17,8 @@
 
 int main(int argc, char *argv[])
 {
-    ask_dir_name();
-    ask_dir_path();
+    // ask_dir_name(); // TODO : ADD CUSTOM NAME AND PATH
+    // ask_dir_path();
     dir_check();
 
     if (fp == NULL)
