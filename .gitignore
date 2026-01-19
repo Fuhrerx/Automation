@@ -2,7 +2,11 @@
 python_automation/
 
 # ENV 
-.env
+*.env
 
 # EXE
-.exe
+*.exe
+
+# files
+*.py
+*.ipynb
