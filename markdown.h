@@ -1,7 +1,6 @@
 //
-// Please follow m_(fnuc name) naming markdown functions
+// Please follow m_(func name) naming markdown functions
 //
-
 #pragma once
 
 #include <stdio.h>
