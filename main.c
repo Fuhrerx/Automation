@@ -54,6 +54,8 @@ int main(int argc, char *argv[])
 
         m_model_evaluation();
 
+        model_eval();
+
         printf("\n");
         printf("File written successfully at %s", relative_path);
         printf("\n");
