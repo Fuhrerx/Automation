@@ -1,3 +1,6 @@
+//
+// Use python naming rules for each python library imports
+//
 #pragma once
 
 #include <stdio.h>
