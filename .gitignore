@@ -1,0 +1,8 @@
+# Dependencies
+python_automation/
+
+# ENV 
+.env
+
+# EXE
+.exe
