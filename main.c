@@ -17,6 +17,8 @@
 
 int main(int argc, char *argv[])
 {
+    ask_dir_name();
+    ask_dir_path();
     dir_check();
 
     if (fp == NULL)
