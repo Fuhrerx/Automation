@@ -1,3 +1,6 @@
+//
+// Add functions in order for easier navigation
+//
 #pragma once
 
 #include <stdio.h>
@@ -72,7 +75,7 @@ extern void hist()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
 
-    printf("\nEnter the no of columns to plot a histogram : \n");
+    printf("\nEnter the no of columns to plot a histogram (0 if none) : \n");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++)
@@ -185,7 +188,6 @@ extern void model_build()
             system("cls");
             printf("Not a valid model : choose again!");
             model_build();
-            break;
         }
     }
     else if (model == 2)
