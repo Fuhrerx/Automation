@@ -16,6 +16,8 @@ int model;
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
+extern ask_dir_name();
+extern ask_dir_path();
 extern void dir_check();
 extern void base_imports();
 extern void ask_torch();
