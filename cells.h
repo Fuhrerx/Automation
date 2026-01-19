@@ -236,4 +236,8 @@ extern void model_eval()
     fprintf(fp, "\n");
     fprintf(fp, "train_r2 = r2_score(y_train, y_pred)\n");
     fprintf(fp, "train_r2\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "accuracy = accuracy_score(y_train, y_pred, normalize=True, sample_weight=None)\n");
+    fprintf(fp, "accuracy*100\n");
 }

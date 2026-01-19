@@ -16,8 +16,8 @@ int model;
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
-extern ask_dir_name();
-extern ask_dir_path();
+extern void ask_dir_name();
+extern void ask_dir_path();
 extern void dir_check();
 extern void base_imports();
 extern void ask_torch();
@@ -30,6 +30,18 @@ extern void scaler();
 #include "models.h"
 #include "cells.h"
 #include "PyList.h"
+
+extern void ask_dir_name()
+{
+    printf("Enter the name of the folder (copy and paste default name - python_automation) : \n");
+    scanf("%s", &dir_name);
+}
+
+extern void ask_dir_path()
+{
+    printf("Enter the name (copy and paste default path - python_automation/model.py) : \n");
+    scanf("%s", &dir_name);
+}
 
 extern void dir_check()
 {
