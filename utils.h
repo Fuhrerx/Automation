@@ -83,6 +83,8 @@ extern void base_imports()
     fprintf(fp, "\n");
     fprintf(fp, as);
     fprintf(fp, "\n");
+    fprintf(fp, sc);
+    fprintf(fp, "\n");
 }
 
 extern void ask_torch()
