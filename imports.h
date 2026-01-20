@@ -15,7 +15,7 @@ char torch[25] = "import torch";
 char plt[35] = "import matplotlib.pyplot as plt";
 char tts[55] = "from sklearn.model_selection import train_test_split";
 char as[60] = "from sklearn.metrics import accuracy_score, f1_score";
-char sc[50] = "import sklearn.preprocessing";
+char sc[50] = "from sklearn.preprocessing import StandardScaler";
 
 // optional
 
