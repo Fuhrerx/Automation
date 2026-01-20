@@ -25,7 +25,7 @@ typedef struct
 extern void read_csv_file();
 extern void drop();
 extern void hist();
-extern void log_transform();
+extern void std_scaler();
 extern void corr();
 extern void heatmap();
 extern void pairplot();
@@ -88,10 +88,12 @@ extern void hist()
     }
 }
 
-extern void log_transform() // TODO : log transform if regression based model
+extern void std_scaler()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
+    fprintf(fp, "scaler = StandardScaler()\n");
+    fprintf(fp, "df = scaler.fit_transform(df)\n");
 }
 
 extern void corr()
