@@ -116,7 +116,7 @@ extern void pairplot()
     fprintf(fp, "\n");
 
     list_pairplot();
-    fprintf(fp, "sns.pairplot(df_numrc, kind='scatter', plot_kws={'alpha': 0.4})");
+    fprintf(fp, "sns.pairplot(df_numrc, kind='scatter', plot_kws={'alpha': 0.4})\n");
 }
 
 extern void model_build()
