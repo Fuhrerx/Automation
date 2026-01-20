@@ -25,6 +25,7 @@ const char R_BOLD[5] = "**";
 extern void m_libs();
 extern void m_read_csv();
 extern void m_plot();
+extern void m_feature_scaling();
 extern void m_model_build();
 extern void m_model_evaluation();
 
@@ -61,6 +62,17 @@ extern void m_plot()
     fprintf(fp, SUB_HEAD);
     fprintf(fp, L_BOLD);
     fprintf(fp, "Plotting And EDA");
+    fprintf(fp, R_BOLD);
+    fprintf(fp, "\n");
+}
+
+extern void m_feature_scaling()
+{
+    fprintf(fp, CELL_MARKDOWN);
+    fprintf(fp, "\n");
+    fprintf(fp, SUB_HEAD);
+    fprintf(fp, L_BOLD);
+    fprintf(fp, "Feature Scaling");
     fprintf(fp, R_BOLD);
     fprintf(fp, "\n");
 }
