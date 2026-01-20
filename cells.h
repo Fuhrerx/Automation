@@ -90,10 +90,13 @@ extern void hist()
 
 extern void std_scaler()
 {
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "scaler = StandardScaler()\n");
-    fprintf(fp, "df = scaler.fit_transform(df)\n");
+    if (model == 1)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
 }
 
 extern void corr()
