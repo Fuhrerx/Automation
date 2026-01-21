@@ -25,7 +25,6 @@ extern void r_ran_for_reg();
 extern void r_k_nearest_reg();
 extern void r_lasso_reg();
 extern void r_elastic_reg();
-extern void r_elastic_reg();
 extern void r_svr_reg();
 
 // classification models
