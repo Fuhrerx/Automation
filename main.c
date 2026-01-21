@@ -48,6 +48,8 @@ int main(int argc, char *argv[])
         heatmap();
         pairplot();
 
+        log_transform();
+
         m_feature_scaling();
 
         std_scaler();
