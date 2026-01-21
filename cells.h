@@ -25,6 +25,7 @@ typedef struct
 extern void read_csv_file();
 extern void drop();
 extern void hist();
+extern void log_transform();
 extern void std_scaler();
 extern void corr();
 extern void heatmap();
@@ -85,6 +86,36 @@ extern void hist()
 
         fprintf(fp, "df.hist(\"%s\")\n", cols);
         fprintf(fp, "plt.show\n");
+    }
+}
+
+extern void log_transform()
+{
+    char ans[4];
+
+    printf("Do you need log scaling/transformation(yes/no) : ");
+    scanf("%s", &ans);
+
+    lower(ans);
+
+    if (strcmp(ans, "yes") == 0)
+    {
+        m_log_transform();
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        list_log_l();
+        fprintf(fp, " = ");
+        list_log_r();
+    }
+    else if (strcmp(ans, "no") == 0)
+    {
+        printf("\nnot applied, move forward!\n");
+    }
+    else
+    {
+        system("cls");
+        printf("\ninvalid input, please use yes or no\n");
+        log_transform();
     }
 }
 
