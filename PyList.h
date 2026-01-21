@@ -15,12 +15,39 @@
 
 FILE *fp;
 
-extern void list_log();
+extern void list_log_l();
+extern void list_log_r();
 extern void list_pairplot();
 extern void list_model_X();
 extern void list_model_y();
 
-extern void list_log()
+extern void list_log_l()
+{
+    int n, i;
+    printf("Enter the number of list elements to log transform : ");
+    scanf("%d", &n);
+
+    char values[n][25];
+
+    printf("\nEnter %d list elements : \n", n);
+    for (i = 0; i < n; ++i)
+    {
+        scanf("%s", values[i]);
+    }
+
+    fprintf(fp, "df_numrc = df[[");
+    for (i = 0; i < n; ++i)
+    {
+        fprintf(fp, "\"%s\"", values[i]);
+        if (i < n - 1)
+        {
+            fprintf(fp, ", ");
+        }
+    }
+    fprintf(fp, "]]\n");
+}
+
+extern void list_log_r()
 {
     int n, i;
     printf("Enter the number of list elements to log transform : ");
