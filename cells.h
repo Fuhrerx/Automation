@@ -90,7 +90,63 @@ extern void hist()
 
 extern void std_scaler()
 {
-    if (model == 1)
+    if (ans_reg == 1)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_reg == 2)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_reg == 5)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_reg == 7)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_reg == 8)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_reg == 10)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_class == 1)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_class == 4)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "scaler = StandardScaler()\n");
+        fprintf(fp, "df = scaler.fit_transform(df)\n");
+    }
+    else if (ans_class == 6)
     {
         fprintf(fp, CELL);
         fprintf(fp, "\n");
