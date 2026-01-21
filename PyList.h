@@ -15,13 +15,13 @@
 
 FILE *fp;
 
-extern void list_log_l();
-extern void list_log_r();
+extern char list_log_l();
+extern char list_log_r();
 extern void list_pairplot();
 extern void list_model_X();
 extern void list_model_y();
 
-extern void list_log_l()
+extern char list_log_l()
 {
     int n, i;
     printf("Enter the number of list elements to log transform : ");
@@ -29,13 +29,13 @@ extern void list_log_l()
 
     char values[n][25];
 
-    printf("\nEnter %d list elements : \n", n);
+    printf("\nEnter new names of %d list elements : \n", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
     }
 
-    fprintf(fp, "df_numrc = df[[");
+    fprintf(fp, "df = df[");
     for (i = 0; i < n; ++i)
     {
         fprintf(fp, "\"%s\"", values[i]);
@@ -44,10 +44,10 @@ extern void list_log_l()
             fprintf(fp, ", ");
         }
     }
-    fprintf(fp, "]]\n");
+    fprintf(fp, "]");
 }
 
-extern void list_log_r()
+extern char list_log_r()
 {
     int n, i;
     printf("Enter the number of list elements to log transform : ");
@@ -55,13 +55,13 @@ extern void list_log_r()
 
     char values[n][25];
 
-    printf("\nEnter %d list elements : \n", n);
+    printf("\nEnter %d list elements that should be transformed : \n", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
     }
 
-    fprintf(fp, "df_numrc = df[[");
+    fprintf(fp, "np.log2(df[");
     for (i = 0; i < n; ++i)
     {
         fprintf(fp, "\"%s\"", values[i]);
@@ -70,7 +70,7 @@ extern void list_log_r()
             fprintf(fp, ", ");
         }
     }
-    fprintf(fp, "]]\n");
+    fprintf(fp, "])\n");
 }
 
 extern void list_pairplot()
