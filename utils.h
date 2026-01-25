@@ -260,7 +260,7 @@ extern void ask_model()
     }
 }
 
-extern void scaler() // TODO : DO NOT IMPLIMENT YET!
+extern void scaler()
 {
     fprintf(fp, CELL);
     fprintf(fp, "\n");
