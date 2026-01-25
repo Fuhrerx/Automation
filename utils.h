@@ -7,6 +7,8 @@
 #include <errno.h>
 #include <string.h>
 
+#define SIZE 250
+
 extern FILE *fp;
 
 int ans_reg;
