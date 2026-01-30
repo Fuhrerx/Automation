@@ -17,3 +17,5 @@ The resulting file will be always .py file in the same directory
 accessing command pallete (CTRL + SHIFT + P) and typing :
 
 Jupyter: Export Current Python File as Jupyter Notebook
+
+Current code lenth (total) : 1349 lines
