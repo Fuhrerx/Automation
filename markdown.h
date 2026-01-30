@@ -1,5 +1,5 @@
 //
-// Please follow m_(func name) naming markdown functions
+// Please follow m_(func_name) naming markdown functions
 //
 #pragma once
 
