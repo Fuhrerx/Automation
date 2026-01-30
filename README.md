@@ -1,4 +1,4 @@
-# Machine Learning Model Automator Using Pure C (v1.3.0)
+# Machine Learning Model Pipeline Automator Using Pure C (v1.3.0)
 
 This is a C based .c to .py(.ipynb) Machine Leaning model automation script
 
