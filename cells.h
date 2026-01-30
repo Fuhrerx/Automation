@@ -35,7 +35,7 @@ extern void model_eval();
 
 extern void read_csv_file()
 {
-    char csv_dir[200];
+    char csv_dir[SIZE];
 
     printf("\nEnter the directory of the CSV file : \n");
     scanf("%s", csv_dir);
