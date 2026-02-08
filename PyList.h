@@ -76,7 +76,7 @@ extern char list_log_r()
 extern void list_pairplot()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to store on pairplot : ");
+    printf("\n>> Enter the number of list elements to store on pairplot : \n");
     scanf("%d", &n);
 
     char values[n][25];
@@ -102,7 +102,7 @@ extern void list_pairplot()
 extern void list_model_X()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to store on X train/test : ");
+    printf("\n>> Enter the number of list elements to store on X train/test : \n");
     scanf("%d", &n);
 
     char values[n][25];
@@ -128,7 +128,7 @@ extern void list_model_X()
 extern void list_model_y()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to store on y train/test : ");
+    printf("\n>> Enter the number of list elements to store on y train/test : \n");
     scanf("%d", &n);
 
     char values[n][25];
