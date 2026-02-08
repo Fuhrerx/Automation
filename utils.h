@@ -118,7 +118,7 @@ extern void ask_torch()
 extern void ask_model()
 {
     printf("\n>> What kind of model are you gonna use : \n");
-    printf(">> Regression (1)\nClassification (2)\n");
+    printf(">> Regression (1)\n>> Classification (2)\n");
     printf(">> Choose : \n");
     scanf("%d", &model);
 
