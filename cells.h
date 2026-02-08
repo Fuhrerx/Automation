@@ -37,7 +37,7 @@ extern void read_csv_file()
 {
     char csv_dir[SIZE];
 
-    printf("\nEnter the directory of the CSV file : \n");
+    printf("\n>> Enter the directory of the CSV file : \n");
     scanf("%s", csv_dir);
 
     fprintf(fp, "df = pd.read_csv(r\"%s\")\n", csv_dir);
@@ -56,12 +56,12 @@ extern void drop()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
 
-    printf("\nEnter the no of columns to drop (type 0 if none): \n");
+    printf("\n>> Enter the no of columns to drop (type 0 if none): \n");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++)
     {
-        printf("\nEnter the column name : \n");
+        printf("\n>> Enter the column name : \n");
         scanf("%s", &cols);
 
         fprintf(fp, "df = df.drop(columns= \"%s\", axis= 1, inplace = True)\n", cols);
@@ -76,12 +76,12 @@ extern void hist()
     fprintf(fp, CELL);
     fprintf(fp, "\n");
 
-    printf("\nEnter the no of columns to plot a histogram (0 if none) : \n");
+    printf("\n>> Enter the no of columns to plot a histogram (0 if none) : \n");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++)
     {
-        printf("\nEnter the column name : \n");
+        printf("\n>> Enter the column name : \n");
         scanf("%s", &cols);
 
         fprintf(fp, "df.hist(\"%s\")\n", cols);
@@ -93,7 +93,7 @@ extern void log_transform()
 {
     char ans[4];
 
-    printf("Do you need log scaling/transformation(yes/no) : ");
+    printf(">> Do you need log scaling/transformation(yes/no) : ");
     scanf("%s", &ans);
 
     lower(ans);
@@ -109,12 +109,12 @@ extern void log_transform()
     }
     else if (strcmp(ans, "no") == 0)
     {
-        printf("\nnot applied, move forward!\n");
+        printf("\n>> Not applied, move forward!\n");
     }
     else
     {
         system("cls");
-        printf("\ninvalid input, please use yes or no\n");
+        printf("\n>> Invalid input, please use yes or no\n");
         log_transform();
     }
 }
@@ -278,7 +278,7 @@ extern void model_build()
 
         default:
             system("cls");
-            printf("Not a valid model : choose again!");
+            printf(">> Not a valid model : choose again!");
             model_build();
         }
     }
@@ -312,7 +312,7 @@ extern void model_build()
 
         default:
             system("cls");
-            printf("invalid input, please input again");
+            printf(">> Invalid input, please input again");
             model_build();
         }
     }
