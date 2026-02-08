@@ -1,12 +1,12 @@
 //
 // Copyright Akshay Babu (c) 2026, All rights reserved.
-// This is : Build v1.3.0(beta), since its open source any edits or
+// This is : Build v1.3.1(beta), since its open source any edits or
 // alterations are allowed by the author for code resusablility
 // and workflow automation, please feel free to edit or report any
 // issues.
 //
 
-#pragma once
+// #pragma once
 
 #include <stdio.h>
 #include <stdbool.h>
