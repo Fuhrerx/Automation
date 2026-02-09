@@ -93,7 +93,7 @@ extern void ask_torch()
 {
     char ans[4];
 
-    printf("\n>> Do you want PyTorch? (yes/no) : \n");
+    printf("\n>> Do you want PyTorch? (yes/no) : \n-- ");
     scanf("%s", ans);
 
     lower(ans);
@@ -119,14 +119,14 @@ extern void ask_model()
 {
     printf("\n>> What kind of model are you gonna use : \n");
     printf(">> Regression (1)\n>> Classification (2)\n");
-    printf(">> Choose : \n");
+    printf(">> Choose : \n-- ");
     scanf("%d", &model);
 
     if (model == 1)
     {
         printf("\n>> What regression model are you planning to use : \n");
         printf(">> Linear Regresssion (1)\nLogistic Regression (2)\nDecision Tree regressor (3)\nXGBoost regressor (4)\nRidge regressor (5)\nRandom Forest regressor (6)\nK nearest regressor (7)\nLasso regression (8)\nElastic Net regression (9)\nSupport Vector Regression (10)\n");
-        printf(">> Choose : \n");
+        printf(">> Choose : \n-- ");
         scanf("%d", &ans_reg);
 
         switch (ans_reg)
@@ -211,7 +211,7 @@ extern void ask_model()
     {
         printf("\n>> What classification model are you planning to use : \n");
         printf(">> Support Vector Machines (1)\nDecision tree classifier (2)\nRandom forest classifier (3)\nK nearest neighbors (4)\nXGBoost classifier (5)\nNeural networks MLP (6)\n");
-        printf(">> Choose : \n");
+        printf(">> Choose : \n-- ");
         scanf("%d", &ans_class);
 
         switch (ans_class)
