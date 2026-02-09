@@ -24,12 +24,12 @@ extern void list_model_y();
 extern char list_log_l()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to log transform : \n-- ");
+    printf("\n>> Enter the number of list elements/columns to log transform : \n-- ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("\n>> Enter new names of %d list elements : \n-- ", n);
+    printf("\n>> Enter new names of %d list elements/columns : \n-- ", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
@@ -50,12 +50,12 @@ extern char list_log_l()
 extern char list_log_r()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to log transform : \n-- ");
+    printf("\n>> Enter the number of list elements/columns to log transform : \n-- ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("\n>> Enter %d list elements that should be transformed : \n-- ", n);
+    printf("\n>> Enter the name(s) of %d list elements/columns that should be transformed : \n-- ", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
@@ -76,12 +76,12 @@ extern char list_log_r()
 extern void list_pairplot()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to store on pairplot : \n-- ");
+    printf("\n>> Enter the number of list elements/columns to store on pairplot : \n-- ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("\n>> Enter %d list elements : \n-- ", n);
+    printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
@@ -102,12 +102,12 @@ extern void list_pairplot()
 extern void list_model_X()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to store on X train/test : \n-- ");
+    printf("\n>> Enter the number of list elements/columns to store on X train/test : \n-- ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("\n>> Enter %d list elements : \n-- ", n);
+    printf("\n>> Enter name(s) of %d list elements/columns : \n-- ", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
@@ -128,12 +128,12 @@ extern void list_model_X()
 extern void list_model_y()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements to store on y train/test : \n-- ");
+    printf("\n>> Enter the number of list elements/columns to store on y train/test : \n-- ");
     scanf("%d", &n);
 
     char values[n][25];
 
-    printf("\n>> Enter %d list elements : \n-- ", n);
+    printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
     for (i = 0; i < n; ++i)
     {
         scanf("%s", values[i]);
