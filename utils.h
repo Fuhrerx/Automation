@@ -18,6 +18,7 @@ int model;
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
+extern int exit();
 extern void ask_dir_name();
 extern void ask_dir_path();
 extern void dir_check();
@@ -32,6 +33,12 @@ extern void scaler();
 #include "models.h"
 #include "cells.h"
 #include "PyList.h"
+
+extern int exit()
+{
+    printf("\n>> Program exited successfully!\n");
+    return 0;
+}
 
 extern void ask_dir_name()
 {
