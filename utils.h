@@ -18,7 +18,7 @@ int model;
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
-extern int exit_prog();
+extern void start_prog();
 extern void ask_dir_name();
 extern void ask_dir_path();
 extern void dir_check();
@@ -34,22 +34,31 @@ extern void scaler();
 #include "cells.h"
 #include "PyList.h"
 
-extern int exit_prog()
+extern void start_prog()
 {
-    printf("\n>> Program exited successfully!\n");
-    return 0;
+    printf("\nMACHINE LEARNING PIPEPLINE AUTOMATOR (MLAuto)\n");
+    printf("\nCopyright (c) Akshay_babu, All rights reserved!\n");
+    printf("\nType 'exit' to exit from the program!\n");
 }
 
 extern void ask_dir_name()
 {
     printf("\n>> Enter the name of the folder (copy and paste default name - python_automation) : \n");
     scanf("%s", &dir_name);
+    if (strcmp(dir_name, "exit") == 0)
+    {
+        exit(1);
+    }
 }
 
 extern void ask_dir_path()
 {
     printf("\n>> Enter the name (copy and paste default path - python_automation/model.py) : \n");
-    scanf("%s", &dir_name);
+    scanf("%s", &relative_path);
+    if (strcmp(relative_path, "exit") == 0)
+    {
+        exit(1);
+    }
 }
 
 extern void dir_check()
@@ -136,7 +145,7 @@ extern void ask_model()
     if (model == 1)
     {
         printf("\n>> What regression model are you planning to use : \n");
-        printf(">> Linear Regresssion (1)\nLogistic Regression (2)\nDecision Tree regressor (3)\nXGBoost regressor (4)\nRidge regressor (5)\nRandom Forest regressor (6)\nK nearest regressor (7)\nLasso regression (8)\nElastic Net regression (9)\nSupport Vector Regression (10)\n");
+        printf(">> Linear Regresssion (1)\n>> Logistic Regression (2)\n>> Decision Tree regressor (3)\n>> XGBoost regressor (4)\n>> Ridge regressor (5)\n>> Random Forest regressor (6)\n>> K nearest regressor (7)\n>> Lasso regression (8)\n>> Elastic Net regression (9)\n>> Support Vector Regression (10)\n");
         printf(">> Choose : \n-- ");
         scanf("%d", &ans_reg);
 
@@ -221,7 +230,7 @@ extern void ask_model()
     else if (model == 2)
     {
         printf("\n>> What classification model are you planning to use : \n");
-        printf(">> Support Vector Machines (1)\nDecision tree classifier (2)\nRandom forest classifier (3)\nK nearest neighbors (4)\nXGBoost classifier (5)\nNeural networks MLP (6)\n");
+        printf(">> Support Vector Machines (1)\n>> Decision tree classifier (2)\n>> Random forest classifier (3)\n>> K nearest neighbors (4)\n>> XGBoost classifier (5)\n>> Neural networks MLP (6)\n");
         printf(">> Choose : \n-- ");
         scanf("%d", &ans_class);
 
