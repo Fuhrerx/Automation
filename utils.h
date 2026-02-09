@@ -18,7 +18,7 @@ int model;
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
-extern int exit();
+extern int exit_prog();
 extern void ask_dir_name();
 extern void ask_dir_path();
 extern void dir_check();
@@ -34,7 +34,7 @@ extern void scaler();
 #include "cells.h"
 #include "PyList.h"
 
-extern int exit()
+extern int exit_prog()
 {
     printf("\n>> Program exited successfully!\n");
     return 0;
@@ -113,6 +113,10 @@ extern void ask_torch()
     else if (strcmp(ans, "no") == 0)
     {
         printf("\n>> PyTorch has not been imported!\n");
+    }
+    else if (strcmp(ans, "exit") == 0)
+    {
+        exit(1);
     }
     else
     {
