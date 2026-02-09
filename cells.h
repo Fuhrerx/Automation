@@ -39,6 +39,10 @@ extern void read_csv_file()
 
     printf("\n>> Enter the directory of the CSV file : \n-- ");
     scanf("%s", csv_dir);
+    if (strcmp(csv_dir, "exit") == 0)
+    {
+        exit(1);
+    }
 
     fprintf(fp, "df = pd.read_csv(r\"%s\")\n", csv_dir);
     fprintf(fp, "df\n");
@@ -91,10 +95,14 @@ extern void hist()
 
 extern void log_transform()
 {
-    char ans[4];
+    char ans[5];
 
     printf("\n>> Do you need log scaling/transformation(yes/no) : \n-- ");
     scanf("%s", &ans);
+    if (strcmp(ans, "exit") == 0)
+    {
+        exit(1);
+    }
 
     lower(ans);
 
