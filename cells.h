@@ -41,6 +41,7 @@ extern void read_csv_file()
     scanf("%s", csv_dir);
     if (strcmp(csv_dir, "exit") == 0)
     {
+        printf("\n>> Program Terminated!\n");
         exit(1);
     }
 
