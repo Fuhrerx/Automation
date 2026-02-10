@@ -36,7 +36,7 @@ extern void scaler();
 
 extern void start_prog()
 {
-    printf("\nMACHINE LEARNING PIPEPLINE AUTOMATOR (MLAuto)\n");
+    printf("\nMACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.1 (MLAuto)\n");
     printf("\nCopyright (c) Akshay_babu, All rights reserved!\n");
     printf("\nType 'exit' to exit from the program!\n");
 }
@@ -125,6 +125,7 @@ extern void ask_torch()
     }
     else if (strcmp(ans, "exit") == 0)
     {
+        printf("\n>> Program Terminated!\n");
         exit(1);
     }
     else
