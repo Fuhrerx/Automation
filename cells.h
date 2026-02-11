@@ -11,7 +11,7 @@
 #include <string.h>
 
 #include "utils.h"
-#include "imports.h"
+#include "scikit/imports.h"
 #include "markdown.h"
 #include "PyList.h"
 
