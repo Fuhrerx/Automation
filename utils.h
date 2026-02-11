@@ -28,7 +28,7 @@ extern void ask_sns();
 extern void ask_model();
 extern void scaler();
 
-#include "imports.h"
+#include "scikit/imports.h"
 #include "markdown.h"
 #include "models.h"
 #include "cells.h"
