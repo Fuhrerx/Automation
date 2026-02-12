@@ -15,7 +15,7 @@
 #include <errno.h>
 #include <string.h>
 
-#include "utils.h"
+#include "structure/utils.h"
 
 extern int app(); // TODO : use only for app creation
 
