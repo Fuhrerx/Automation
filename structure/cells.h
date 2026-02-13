@@ -221,123 +221,128 @@ extern void pairplot()
 
 extern void model_build()
 {
-
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    list_model_X();
-    list_model_y();
-    fprintf(fp, "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=42)\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "X_train\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "X_test\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "y_train\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "y_test\n");
-
-    if (model == 1)
+    if (strcmp(ans_pytorch, "no") == 0)
     {
-        switch (ans_reg)
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        list_model_X();
+        list_model_y();
+        fprintf(fp, "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=42)\n");
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "X_train\n");
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "X_test\n");
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "y_train\n");
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "y_test\n");
+
+        if (model == 1)
         {
-        case 1:
-            r_lin_reg();
-            break;
+            switch (ans_reg)
+            {
+            case 1:
+                r_lin_reg();
+                break;
 
-        case 2:
-            r_log_reg();
-            break;
+            case 2:
+                r_log_reg();
+                break;
 
-        case 3:
-            r_dec_tree_reg();
-            break;
+            case 3:
+                r_dec_tree_reg();
+                break;
 
-        case 4:
-            r_xgbooost_reg();
-            break;
+            case 4:
+                r_xgbooost_reg();
+                break;
 
-        case 5:
-            r_lin_ridge_reg();
-            break;
+            case 5:
+                r_lin_ridge_reg();
+                break;
 
-        case 6:
-            r_ran_for_reg();
-            break;
+            case 6:
+                r_ran_for_reg();
+                break;
 
-        case 7:
-            r_k_nearest_reg();
-            break;
+            case 7:
+                r_k_nearest_reg();
+                break;
 
-        case 8:
-            r_lasso_reg();
-            break;
+            case 8:
+                r_lasso_reg();
+                break;
 
-        case 9:
-            r_elastic_reg();
-            break;
+            case 9:
+                r_elastic_reg();
+                break;
 
-        case 10:
-            r_svr_reg();
-            break;
+            case 10:
+                r_svr_reg();
+                break;
 
-        default:
-            system("cls");
-            printf(">> Not a valid model : choose again!");
-            model_build();
+            default:
+                system("cls");
+                printf(">> Not a valid model : choose again!");
+                model_build();
+            }
         }
-    }
-    else if (model == 2)
-    {
-        switch (ans_class)
+        else if (model == 2)
         {
-        case 1:
-            c_svm_class();
-            break;
+            switch (ans_class)
+            {
+            case 1:
+                c_svm_class();
+                break;
 
-        case 2:
-            c_dec_class();
-            break;
+            case 2:
+                c_dec_class();
+                break;
 
-        case 3:
-            c_ran_for_class();
-            break;
+            case 3:
+                c_ran_for_class();
+                break;
 
-        case 4:
-            c_k_near_class();
-            break;
+            case 4:
+                c_k_near_class();
+                break;
 
-        case 5:
-            c_xgboost_class();
-            break;
+            case 5:
+                c_xgboost_class();
+                break;
 
-        case 6:
-            c_mlp_class();
-            break;
+            case 6:
+                c_mlp_class();
+                break;
 
-        default:
-            system("cls");
-            printf(">> Invalid input, please input again");
-            model_build();
+            default:
+                system("cls");
+                printf(">> Invalid input, please input again");
+                model_build();
+            }
         }
     }
 }
 
 extern void model_eval()
 {
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "train_mse = mean_squared_error(y_train, y_pred)\n");
-    fprintf(fp, "train_mse\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "train_r2 = r2_score(y_train, y_pred)\n");
-    fprintf(fp, "train_r2\n");
-    fprintf(fp, CELL);
-    fprintf(fp, "\n");
-    fprintf(fp, "accuracy = accuracy_score(y_train, y_pred, normalize=True, sample_weight=None)\n");
-    fprintf(fp, "accuracy*100\n");
+    if (strcmp(ans_pytorch, "no") == 0)
+    {
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "train_mse = mean_squared_error(y_train, y_pred)\n");
+        fprintf(fp, "train_mse\n");
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "train_r2 = r2_score(y_train, y_pred)\n");
+        fprintf(fp, "train_r2\n");
+        fprintf(fp, CELL);
+        fprintf(fp, "\n");
+        fprintf(fp, "accuracy = accuracy_score(y_train, y_pred, normalize=True, sample_weight=None)\n");
+        fprintf(fp, "accuracy*100\n");
+    }
 }
