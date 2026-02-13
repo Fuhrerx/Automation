@@ -101,51 +101,59 @@ extern void list_pairplot()
 extern void list_model_X()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements/columns to store on X train/test : \n-- ");
-    scanf("%d", &n);
 
-    char values[n][25];
-
-    printf("\n>> Enter name(s) of %d list elements/columns : \n-- ", n);
-    for (i = 0; i < n; ++i)
+    if (strcmp(ans_pytorch, "no") == 0)
     {
-        scanf("%s", values[i]);
-    }
+        printf("\n>> Enter the number of list elements/columns to store on X train/test : \n-- ");
+        scanf("%d", &n);
 
-    fprintf(fp, "X = df[[");
-    for (i = 0; i < n; ++i)
-    {
-        fprintf(fp, "\"%s\"", values[i]);
-        if (i < n - 1)
+        char values[n][25];
+
+        printf("\n>> Enter name(s) of %d list elements/columns : \n-- ", n);
+        for (i = 0; i < n; ++i)
         {
-            fprintf(fp, ", ");
+            scanf("%s", values[i]);
         }
+
+        fprintf(fp, "X = df[[");
+        for (i = 0; i < n; ++i)
+        {
+            fprintf(fp, "\"%s\"", values[i]);
+            if (i < n - 1)
+            {
+                fprintf(fp, ", ");
+            }
+        }
+        fprintf(fp, "]]\n");
     }
-    fprintf(fp, "]]\n");
 }
 
 extern void list_model_y()
 {
     int n, i;
-    printf("\n>> Enter the number of list elements/columns to store on y train/test : \n-- ");
-    scanf("%d", &n);
 
-    char values[n][25];
-
-    printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
-    for (i = 0; i < n; ++i)
+    if (strcmp(ans_pytorch, "no") == 0)
     {
-        scanf("%s", values[i]);
-    }
+        printf("\n>> Enter the number of list elements/columns to store on y train/test : \n-- ");
+        scanf("%d", &n);
 
-    fprintf(fp, "y = df[[");
-    for (i = 0; i < n; ++i)
-    {
-        fprintf(fp, "\"%s\"", values[i]);
-        if (i < n - 1)
+        char values[n][25];
+
+        printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
+        for (i = 0; i < n; ++i)
         {
-            fprintf(fp, ", ");
+            scanf("%s", values[i]);
         }
+
+        fprintf(fp, "y = df[[");
+        for (i = 0; i < n; ++i)
+        {
+            fprintf(fp, "\"%s\"", values[i]);
+            if (i < n - 1)
+            {
+                fprintf(fp, ", ");
+            }
+        }
+        fprintf(fp, "]]\n");
     }
-    fprintf(fp, "]]\n");
 }
