@@ -5,11 +5,10 @@ python_automation/
 *.env
 
 # EXE
-*.exe
+main.exe
 
 # files
 *.py
 *.ipynb
 .vscode
 .venv
-Python Automator App.c
