@@ -14,10 +14,12 @@ FILE *fp = NULL;
 int ans_reg;
 int ans_class;
 int model;
+char ans_pytorch[4];
 
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
+extern void lower(char *str);
 extern void start_prog();
 extern void ask_dir_name();
 extern void ask_dir_path();
@@ -33,6 +35,14 @@ extern void scaler();
 #include "../scikit/models.h"
 #include "cells.h"
 #include "PyList.h"
+
+extern void lower(char *str)
+{
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        str[i] = (char)tolower(str[i]);
+    }
+}
 
 extern void start_prog()
 {
@@ -107,23 +117,21 @@ extern void base_imports()
 
 extern void ask_torch()
 {
-    char ans[4];
-
     printf("\n>> Do you want PyTorch? (yes/no) : \n-- ");
-    scanf("%s", ans);
+    scanf("%s", ans_pytorch);
 
-    lower(ans);
+    lower(ans_pytorch);
 
-    if (strcmp(ans, "yes") == 0)
+    if (strcmp(ans_pytorch, "yes") == 0)
     {
         fprintf(fp, torch);
         fprintf(fp, "\n");
     }
-    else if (strcmp(ans, "no") == 0)
+    else if (strcmp(ans_pytorch, "no") == 0)
     {
         printf("\n>> PyTorch has not been imported!\n");
     }
-    else if (strcmp(ans, "exit") == 0)
+    else if (strcmp(ans_pytorch, "exit") == 0)
     {
         printf("\n>> Program Terminated!\n");
         exit(1);
@@ -138,146 +146,149 @@ extern void ask_torch()
 
 extern void ask_model()
 {
-    printf("\n>> What kind of model are you gonna use : \n");
-    printf(">> Regression (1)\n>> Classification (2)\n");
-    printf(">> Choose : \n-- ");
-    scanf("%d", &model);
-
-    if (model == 1)
+    if (strcmp(ans_pytorch, "no") == 0)
     {
-        printf("\n>> What regression model are you planning to use : \n");
-        printf(">> Linear Regresssion (1)\n>> Logistic Regression (2)\n>> Decision Tree regressor (3)\n>> XGBoost regressor (4)\n>> Ridge regressor (5)\n>> Random Forest regressor (6)\n>> K nearest regressor (7)\n>> Lasso regression (8)\n>> Elastic Net regression (9)\n>> Support Vector Regression (10)\n");
+        printf("\n>> What kind of model are you gonna use : \n");
+        printf(">> Regression (1)\n>> Classification (2)\n");
         printf(">> Choose : \n-- ");
-        scanf("%d", &ans_reg);
+        scanf("%d", &model);
 
-        switch (ans_reg)
+        if (model == 1)
         {
-        case 1:
-            fprintf(fp, sk_lin);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            printf("\n>> What regression model are you planning to use : \n");
+            printf(">> Linear Regresssion (1)\n>> Logistic Regression (2)\n>> Decision Tree regressor (3)\n>> XGBoost regressor (4)\n>> Ridge regressor (5)\n>> Random Forest regressor (6)\n>> K nearest regressor (7)\n>> Lasso regression (8)\n>> Elastic Net regression (9)\n>> Support Vector Regression (10)\n");
+            printf(">> Choose : \n-- ");
+            scanf("%d", &ans_reg);
 
-        case 2:
-            fprintf(fp, sk_log);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            switch (ans_reg)
+            {
+            case 1:
+                fprintf(fp, sk_lin);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 3:
-            fprintf(fp, sk_dec_reg);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 2:
+                fprintf(fp, sk_log);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 4:
-            fprintf(fp, xgboost);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 3:
+                fprintf(fp, sk_dec_reg);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 5:
-            fprintf(fp, sk_lin_ridge);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 4:
+                fprintf(fp, xgboost);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 6:
-            fprintf(fp, ran_for_reg);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 5:
+                fprintf(fp, sk_lin_ridge);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 7:
-            fprintf(fp, k_near_reg);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 6:
+                fprintf(fp, ran_for_reg);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 8:
-            fprintf(fp, lasso);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 7:
+                fprintf(fp, k_near_reg);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 9:
-            fprintf(fp, elastic);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 8:
+                fprintf(fp, lasso);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        case 10:
-            fprintf(fp, svr);
-            fprintf(fp, "\n");
-            fprintf(fp, mse_r2);
-            fprintf(fp, "\n");
-            break;
+            case 9:
+                fprintf(fp, elastic);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
 
-        default:
+            case 10:
+                fprintf(fp, svr);
+                fprintf(fp, "\n");
+                fprintf(fp, mse_r2);
+                fprintf(fp, "\n");
+                break;
+
+            default:
+                system("cls");
+                printf(">> Invalid, please enter again\n");
+                ask_model();
+            }
+        }
+        else if (model == 2)
+        {
+            printf("\n>> What classification model are you planning to use : \n");
+            printf(">> Support Vector Machines (1)\n>> Decision tree classifier (2)\n>> Random forest classifier (3)\n>> K nearest neighbors (4)\n>> XGBoost classifier (5)\n>> Neural networks MLP (6)\n");
+            printf(">> Choose : \n-- ");
+            scanf("%d", &ans_class);
+
+            switch (ans_class)
+            {
+            case 1:
+                fprintf(fp, svm);
+                fprintf(fp, "\n");
+                break;
+
+            case 2:
+                fprintf(fp, sk_dec_class);
+                fprintf(fp, "\n");
+                break;
+
+            case 3:
+                fprintf(fp, ran_for_class);
+                fprintf(fp, "\n");
+                break;
+
+            case 4:
+                fprintf(fp, k_near_class);
+                fprintf(fp, "\n");
+                break;
+
+            case 5:
+                fprintf(fp, xgboost);
+                fprintf(fp, "\n");
+                break;
+
+            case 6:
+                fprintf(fp, mlp);
+                fprintf(fp, "\n");
+                break;
+
+            default:
+                system("cls");
+                printf(">> Invalid, please enter again\n");
+                ask_model();
+            }
+        }
+        else
+        {
             system("cls");
-            printf(">> Invalid, please enter again\n");
+            printf(">> Invalid input, please select again\n");
             ask_model();
         }
-    }
-    else if (model == 2)
-    {
-        printf("\n>> What classification model are you planning to use : \n");
-        printf(">> Support Vector Machines (1)\n>> Decision tree classifier (2)\n>> Random forest classifier (3)\n>> K nearest neighbors (4)\n>> XGBoost classifier (5)\n>> Neural networks MLP (6)\n");
-        printf(">> Choose : \n-- ");
-        scanf("%d", &ans_class);
-
-        switch (ans_class)
-        {
-        case 1:
-            fprintf(fp, svm);
-            fprintf(fp, "\n");
-            break;
-
-        case 2:
-            fprintf(fp, sk_dec_class);
-            fprintf(fp, "\n");
-            break;
-
-        case 3:
-            fprintf(fp, ran_for_class);
-            fprintf(fp, "\n");
-            break;
-
-        case 4:
-            fprintf(fp, k_near_class);
-            fprintf(fp, "\n");
-            break;
-
-        case 5:
-            fprintf(fp, xgboost);
-            fprintf(fp, "\n");
-            break;
-
-        case 6:
-            fprintf(fp, mlp);
-            fprintf(fp, "\n");
-            break;
-
-        default:
-            system("cls");
-            printf(">> Invalid, please enter again\n");
-            ask_model();
-        }
-    }
-    else
-    {
-        system("cls");
-        printf(">> Invalid input, please select again\n");
-        ask_model();
     }
 }
 
