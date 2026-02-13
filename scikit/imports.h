@@ -85,15 +85,3 @@ char svm[40] = "from sklearn.svm import SVC";
 // mlp
 
 char mlp[50] = "from sklearn.neural_network import MLPClassifier";
-
-// lowercase func
-
-extern void lower(char *str);
-
-extern void lower(char *str)
-{
-    for (int i = 0; str[i] != '\0'; i++)
-    {
-        str[i] = (char)tolower(str[i]);
-    }
-}
