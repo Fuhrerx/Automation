@@ -241,7 +241,7 @@ extern void model_build()
         fprintf(fp, "\n");
         fprintf(fp, "y_test\n");
 
-        if (model == 1)
+        if (strcmp(model, "1") == 0)
         {
             switch (ans_reg)
             {
@@ -291,7 +291,7 @@ extern void model_build()
                 model_build();
             }
         }
-        else if (model == 2)
+        else if (strcmp(model, "2") == 0)
         {
             switch (ans_class)
             {
