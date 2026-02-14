@@ -13,7 +13,7 @@ FILE *fp = NULL;
 
 int ans_reg;
 int ans_class;
-char model[2];
+char model[5];
 char ans_pytorch[4];
 
 char dir_name[25] = "python_automation";
@@ -151,7 +151,7 @@ extern void ask_model()
         printf("\n>> What kind of model are you gonna use : \n");
         printf(">> Regression (1)\n>> Classification (2)\n");
         printf(">> Choose : \n-- ");
-        scanf("%c", &model);
+        scanf("%s", &model);
 
         if (strcmp(model, "1") == 0)
         {
@@ -282,6 +282,10 @@ extern void ask_model()
                 printf(">> Invalid, please enter again\n");
                 ask_model();
             }
+        }
+        else if (strcmp(model, "exit") == 0)
+        {
+            exit(1);
         }
         else
         {
