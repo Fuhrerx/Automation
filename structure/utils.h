@@ -46,7 +46,7 @@ extern void lower(char *str)
 
 extern void start_prog()
 {
-    printf("\nMACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.1 (MLAuto)\n");
+    printf("\nMACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.2 (MLAuto)\n");
     printf("\nCopyright (c) Akshay_babu, All rights reserved!\n");
     printf("\nType 'exit' to exit from the program!\n");
 }
