@@ -13,7 +13,7 @@ FILE *fp = NULL;
 
 int ans_reg;
 int ans_class;
-int model;
+char model[2];
 char ans_pytorch[4];
 
 char dir_name[25] = "python_automation";
@@ -151,9 +151,9 @@ extern void ask_model()
         printf("\n>> What kind of model are you gonna use : \n");
         printf(">> Regression (1)\n>> Classification (2)\n");
         printf(">> Choose : \n-- ");
-        scanf("%d", &model);
+        scanf("%c", &model);
 
-        if (model == 1)
+        if (strcmp(model, "1") == 0)
         {
             printf("\n>> What regression model are you planning to use : \n");
             printf(">> Linear Regresssion (1)\n>> Logistic Regression (2)\n>> Decision Tree regressor (3)\n>> XGBoost regressor (4)\n>> Ridge regressor (5)\n>> Random Forest regressor (6)\n>> K nearest regressor (7)\n>> Lasso regression (8)\n>> Elastic Net regression (9)\n>> Support Vector Regression (10)\n");
@@ -238,7 +238,7 @@ extern void ask_model()
                 ask_model();
             }
         }
-        else if (model == 2)
+        else if (strcmp(model, "2") == 0)
         {
             printf("\n>> What classification model are you planning to use : \n");
             printf(">> Support Vector Machines (1)\n>> Decision tree classifier (2)\n>> Random forest classifier (3)\n>> K nearest neighbors (4)\n>> XGBoost classifier (5)\n>> Neural networks MLP (6)\n");
