@@ -1,3 +1,7 @@
+//
+// PyTorch module for upcoming PyTorch functions. Use pytorch_(func_name) for functions here.
+//
+
 #pragma once
 
 #include <stdio.h>
