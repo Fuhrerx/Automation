@@ -1,3 +1,8 @@
+//
+// App utilities for MLAuto.c file, this is also executabe even from main.c file for bug fixes and development
+// use this when you want as an exe file.
+//
+
 #pragma once
 
 #include <stdio.h>
