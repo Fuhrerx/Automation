@@ -70,6 +70,11 @@ extern void drop()
 
         fprintf(fp, "df = df.drop(columns= \"%s\", axis= 1, inplace = True)\n", cols);
     }
+    if (strcmp(cols, "exit") == 0)
+    {
+        printf("\n>> Program Terminated!\n");
+        exit(1);
+    }
 }
 
 extern void hist()
@@ -87,6 +92,11 @@ extern void hist()
     {
         printf("\n>> Enter the column name : \n-- ");
         scanf("%s", &cols);
+        if (strcmp(cols, "exit") == 0)
+        {
+            printf("\n>> Program Terminated!\n");
+            exit(1);
+        }
 
         fprintf(fp, "df.hist(\"%s\")\n", cols);
         fprintf(fp, "plt.show\n");
@@ -101,6 +111,7 @@ extern void log_transform()
     scanf("%s", &ans);
     if (strcmp(ans, "exit") == 0)
     {
+        printf("\n>> Program Terminated!\n");
         exit(1);
     }
 
