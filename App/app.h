@@ -1,7 +1,10 @@
 //
 // App utilities for MLAuto.c file, this is also executabe even from main.c file for bug fixes and development
-// use this when you want as an exe file.
+// use this when you want to deploy as an exe file after an feature/security update.
 //
+// To devs :
+// Dont forget to change any new code updates in main.c file to here, otherwise you may not see the new features
+// added in the MLAuto.c/exe file
 
 #pragma once
 
@@ -60,9 +63,7 @@ extern int app()
 
         model_eval();
 
-        printf("\n");
-        printf("File written successfully at %s", relative_path);
-        printf("\n");
+        printf("\nFile written successfully at %s\n", relative_path);
 
         fclose(fp);
 
