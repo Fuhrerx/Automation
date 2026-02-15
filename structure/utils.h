@@ -57,6 +57,7 @@ extern void ask_dir_name()
     scanf("%s", &dir_name);
     if (strcmp(dir_name, "exit") == 0)
     {
+        printf("\n>> Program Terminated!\n");
         exit(1);
     }
 }
@@ -67,6 +68,7 @@ extern void ask_dir_path()
     scanf("%s", &relative_path);
     if (strcmp(relative_path, "exit") == 0)
     {
+        printf("\n>> Program Terminated!\n");
         exit(1);
     }
 }
@@ -285,6 +287,7 @@ extern void ask_model()
         }
         else if (strcmp(model, "exit") == 0)
         {
+            printf("\n>> Program Terminated!\n");
             exit(1);
         }
         else
