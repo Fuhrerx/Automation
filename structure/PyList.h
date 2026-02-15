@@ -33,6 +33,10 @@ extern char list_log_l()
     {
         scanf("%s", values[i]);
     }
+    if (strcmp(values[i], "exit") == 0)
+    {
+        exit(1);
+    }
 
     fprintf(fp, "df = df[");
     for (i = 0; i < n; ++i)
@@ -81,9 +85,13 @@ extern void list_pairplot()
     char values[n][25];
 
     printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
-    for (i = 0; i < n; ++i)
+    for (i = 0; i < n; i++)
     {
         scanf("%s", values[i]);
+    }
+    if (strcmp(values[i], "exit") == 0)
+    {
+        exit(1);
     }
 
     fprintf(fp, "df_numrc = df[[");
