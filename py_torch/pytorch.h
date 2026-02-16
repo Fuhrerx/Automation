@@ -10,3 +10,6 @@
 #include <direct.h>
 #include <errno.h>
 #include <string.h>
+
+extern void pytorch_lin();
+extern void pytorch_log();
