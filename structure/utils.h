@@ -30,12 +30,6 @@ extern void ask_sns();
 extern void ask_model();
 extern void scaler();
 
-#include "markdown.h"
-#include "../scikit/imports.h"
-#include "../scikit/models.h"
-#include "cells.h"
-#include "PyList.h"
-
 extern void lower(char *str)
 {
     for (int i = 0; str[i] != '\0'; i++)
@@ -46,9 +40,11 @@ extern void lower(char *str)
 
 extern void start_prog()
 {
-    printf("\nMACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.2 (MLAuto)\n");
-    printf("\nCopyright (c) Akshay_babu, All rights reserved!\n");
-    printf("\nType 'exit' to exit from the program!\n");
+    printf("\n-----------------------------------------------------------\n");
+    printf("\n----MACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.2 (MLAuto)----\n");
+    printf("\n------Copyright (c) Akshay_babu, All rights reserved!------\n");
+    printf("\n----------Type 'exit' to exit from the program!------------\n");
+    printf("\n-----------------------------------------------------------\n");
 }
 
 extern void ask_dir_name()
