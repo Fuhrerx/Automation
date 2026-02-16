@@ -6,12 +6,7 @@
 #include <direct.h>
 #include <errno.h>
 #include <string.h>
-
-#include "markdown.h"
-#include "../scikit/imports.h"
-#include "../scikit/models.h"
-#include "cells.h"
-#include "PyList.h"
+#include <ctype.h>
 
 #define SIZE 250
 
@@ -22,10 +17,24 @@ int ans_class;
 char model[5];
 char ans_pytorch[4];
 
+#include "markdown.h"
+#include "../scikit/imports.h"
+#include "../scikit/models.h"
+
+extern void str_lower(char *str)
+{
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        str[i] = (char)tolower((unsigned char)str[i]);
+    }
+}
+
+#include "cells.h"
+#include "PyList.h"
+
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
-extern void lower(char *str);
 extern void start_prog();
 extern void ask_dir_name();
 extern void ask_dir_path();
@@ -35,14 +44,6 @@ extern void ask_torch();
 extern void ask_sns();
 extern void ask_model();
 extern void scaler();
-
-extern void lower(char *str)
-{
-    for (int i = 0; str[i] != '\0'; i++)
-    {
-        str[i] = (char)tolower(str[i]);
-    }
-}
 
 extern void start_prog()
 {
@@ -124,7 +125,7 @@ extern void ask_torch()
     printf("\n>> Do you want PyTorch? (yes/no) : \n-- ");
     scanf("%s", ans_pytorch);
 
-    lower(ans_pytorch);
+    str_lower(ans_pytorch);
 
     if (strcmp(ans_pytorch, "yes") == 0)
     {
