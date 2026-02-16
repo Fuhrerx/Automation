@@ -11,6 +11,7 @@
 #include <string.h>
 
 #include "../scikit/imports.h"
+#include "utils.h"
 
 extern FILE *fp;
 
