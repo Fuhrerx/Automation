@@ -10,9 +10,12 @@
 #include <errno.h>
 #include <string.h>
 
+#define SIZE 250
+
 #include "../scikit/imports.h"
 #include "markdown.h"
 #include "PyList.h"
+#include "utils.h"
 
 extern FILE *fp;
 
@@ -115,7 +118,7 @@ extern void log_transform()
         exit(1);
     }
 
-    lower(ans);
+    str_lower(ans);
 
     if (strcmp(ans, "yes") == 0)
     {
