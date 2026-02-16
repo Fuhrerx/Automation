@@ -7,6 +7,12 @@
 #include <errno.h>
 #include <string.h>
 
+#include "markdown.h"
+#include "../scikit/imports.h"
+#include "../scikit/models.h"
+#include "cells.h"
+#include "PyList.h"
+
 #define SIZE 250
 
 FILE *fp = NULL;
