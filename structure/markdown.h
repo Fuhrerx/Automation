@@ -28,6 +28,7 @@ extern void m_log_transform();
 extern void m_feature_scaling();
 extern void m_model_build();
 extern void m_model_evaluation();
+extern void m_pytorch();
 
 extern void m_libs()
 {
@@ -107,5 +108,18 @@ extern void m_model_evaluation()
     fprintf(fp, L_BOLD);
     fprintf(fp, "Evaluating model");
     fprintf(fp, R_BOLD);
+    fprintf(fp, "\n");
+}
+
+extern void m_pytorch()
+{
+    fprintf(fp, CELL_MARKDOWN);
+    fprintf(fp, "\n");
+    fprintf(fp, SUB_HEAD);
+    fprintf(fp, L_BOLD);
+    fprintf(fp, "Pytorch model creation");
+    fprintf(fp, R_BOLD);
+    fprintf(fp, "\n");
+    fprintf(fp, CELL);
     fprintf(fp, "\n");
 }
