@@ -20,6 +20,7 @@ char ans_pytorch[4];
 #include "markdown.h"
 #include "../scikit/imports.h"
 #include "../scikit/models.h"
+#include "../py_torch/torch_imports.h"
 
 extern void str_lower(char *str)
 {
