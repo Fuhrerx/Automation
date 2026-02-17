@@ -8,3 +8,8 @@
 #include <string.h>
 
 #include "../structure/utils.h"
+
+// base
+
+const char torch[15] = "import torch";
+const char torch_nn[15] = "import torch.nn";
