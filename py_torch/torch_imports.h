@@ -1,3 +1,9 @@
+//
+// Use python naming rules for each python library imports
+//
+// For Pytorch library modules
+//
+
 #pragma once
 
 #include <stdio.h>
@@ -11,5 +17,5 @@
 
 // base
 
-const char torch[15] = "import torch";
-const char torch_nn[15] = "import torch.nn";
+const char torch[25] = "import torch";
+const char torch_nn[20] = "import torch.nn";
