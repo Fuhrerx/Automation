@@ -1,6 +1,9 @@
 //
 // Use python naming rules for each python library imports
 //
+// For scikitlearn modules
+//
+
 #pragma once
 
 #include <stdio.h>
@@ -11,7 +14,6 @@
 
 const char pd[25] = "import pandas as pd";
 const char np[25] = "import numpy as np";
-const char torch[25] = "import torch";
 const char plt[35] = "import matplotlib.pyplot as plt";
 const char tts[55] = "from sklearn.model_selection import train_test_split";
 const char as[60] = "from sklearn.metrics import accuracy_score, f1_score";
