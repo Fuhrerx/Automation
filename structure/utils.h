@@ -9,6 +9,7 @@
 #include <ctype.h>
 
 #define SIZE 250
+#define BUFF 100
 
 FILE *fp = NULL;
 
