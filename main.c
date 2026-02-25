@@ -7,7 +7,7 @@
 //
 // Use this code to debug or test new features, otherwise to use as it is
 // go to :
-// ../Automation/App/MLAuto.exe to use it as an APP
+// ../Automation/App/MLAuto.exe to use it as a CLI APP
 //
 
 #include <stdio.h>
