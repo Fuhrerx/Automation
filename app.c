@@ -1,3 +1,9 @@
+//
+// For main.so creation, do not execute this file, instead execute the App/MLAuto.c in the App directory
+// and then run the command : `gcc -shared -o main.so -fPIC app.c` in the terminal to create the
+// main.so file in the App directory,
+//
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
