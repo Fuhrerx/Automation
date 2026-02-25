@@ -8,7 +8,7 @@ python_automation/
 main.exe
 
 # files
-*.py
+model.py
 *.ipynb
 .vscode
 .venv
