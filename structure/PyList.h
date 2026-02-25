@@ -85,9 +85,9 @@ extern void list_pairplot()
 
     char values[n][25];
 
-    printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
-    for (i = 0; i < n; i++)
+    for (i = 1; i <= n; i++)
     {
+        printf("\n>> Enter the name(s) of %d list elements/columns : \n-- ", n);
         scanf("%s", values[i]);
     }
     if (strcmp(values[i], "exit") == 0)
