@@ -1,8 +1,11 @@
+#
 # This file serves as the entry point for the application for python scripting. It determines the operating 
-# system and loads. 
-# the appropriate library (either a .exe for Windows or a .so for Unix/Linux) to run the application.
+# system and loads the appropriate library (either a .exe for Windows or a .so for Unix/Linux) to run the application.
 # Use `python main.py` to execute the application. Make sure the corresponding library file is in the same 
 # directory as this script.
+#
+# Use this code for adding future GUI or any other python functions.
+#
 
 import ctypes
 import os
