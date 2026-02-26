@@ -12,7 +12,7 @@
 
 #define SIZE 250
 
-#include "../scikit/imports.h"
+#include "../scikit/sk_imports.h"
 #include "markdown.h"
 #include "PyList.h"
 #include "utils.h"
