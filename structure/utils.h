@@ -19,8 +19,8 @@ char model[5];
 char ans_pytorch[4];
 
 #include "markdown.h"
-#include "../scikit/imports.h"
-#include "../scikit/models.h"
+#include "../scikit/sk_imports.h"
+#include "../scikit/sk_models.h"
 #include "../py_torch/torch_imports.h"
 
 extern void str_lower(char *str)
@@ -120,6 +120,14 @@ extern void base_imports()
     fprintf(fp, "\n");
     fprintf(fp, sc);
     fprintf(fp, "\n");
+
+    if (strcmp(ans_pytorch, "yes") == 0)
+    {
+        fprintf(fp, torch);
+        fprintf(fp, "\n");
+        fprintf(fp, torch_nn);
+        fprintf(fp, "\n");
+    }
 }
 
 extern void ask_torch()
