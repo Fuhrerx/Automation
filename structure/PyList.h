@@ -10,7 +10,7 @@
 #include <errno.h>
 #include <string.h>
 
-#include "../scikit/imports.h"
+#include "../scikit/sk_imports.h"
 #include "utils.h"
 
 extern FILE *fp;
