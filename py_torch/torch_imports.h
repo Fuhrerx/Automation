@@ -13,9 +13,7 @@
 #include <errno.h>
 #include <string.h>
 
-#include "../structure/utils.h"
-
 // base
 
 const char torch[25] = "import torch";
-const char torch_nn[20] = "import torch.nn";
+const char torch_nn[25] = "import torch.nn as nn";
