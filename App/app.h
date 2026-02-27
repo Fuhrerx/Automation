@@ -12,9 +12,9 @@
 
 #include "../structure/utils.h"
 
-extern int app();
+int app();
 
-extern int app()
+__declspec(dllexport) int app()
 {
     // ask_dir_name(); // TODO : ADD CUSTOM NAME AND PATH
     // ask_dir_path();
