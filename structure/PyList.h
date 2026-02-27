@@ -15,13 +15,13 @@
 
 extern FILE *fp;
 
-extern char list_log_l();
-extern char list_log_r();
+extern void list_log_l();
+extern void list_log_r();
 extern void list_pairplot();
 extern void list_model_X();
 extern void list_model_y();
 
-extern char list_log_l()
+extern void list_log_l()
 {
     int n, i;
     printf("\n>> Enter the number of list elements/columns to log transform : \n-- ");
@@ -48,10 +48,10 @@ extern char list_log_l()
             fprintf(fp, ", ");
         }
     }
-    fprintf(fp, "]");
+    fprintf(fp, "]\n");
 }
 
-extern char list_log_r()
+extern void list_log_r()
 {
     int n, i;
     printf("\n>> Enter the number of list elements/columns to log transform : \n-- ");
