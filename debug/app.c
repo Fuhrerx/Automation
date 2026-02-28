@@ -1,7 +1,8 @@
 //
 // For main.so creation, do not execute this file, instead execute the App/MLAuto.c in the App directory
 // and then run the command : `gcc -shared -o main.so -fPIC app.c` in the terminal to create the
-// main.so file in the App directory,
+// main.so file in the App directory, for 64 bit app.dll creation using msys2 terminal, use the command :
+// `gcc -shared -o app.dll -Wl,--out-implib,libapp.a -fPIC app.c`
 //
 
 #include <stdio.h>
