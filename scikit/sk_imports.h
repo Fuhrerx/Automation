@@ -87,3 +87,7 @@ const char svm[40] = "from sklearn.svm import SVC";
 // mlp
 
 const char mlp[50] = "from sklearn.neural_network import MLPClassifier";
+
+// isolation forest
+
+const char iso_forest[50] = "from sklearn.ensemble import IsolationForest";
