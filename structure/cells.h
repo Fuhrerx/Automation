@@ -1,6 +1,7 @@
 //
 // Add functions in order for easier navigation
 //
+
 #pragma once
 
 #include <stdio.h>
@@ -297,6 +298,10 @@ extern void model_build()
 
             case 10:
                 r_svr_reg();
+                break;
+
+            case 11:
+                r_iso_forest_reg();
                 break;
 
             default:
