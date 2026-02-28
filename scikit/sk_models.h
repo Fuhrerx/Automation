@@ -27,6 +27,7 @@ extern void r_k_nearest_reg();
 extern void r_lasso_reg();
 extern void r_elastic_reg();
 extern void r_svr_reg();
+extern void r_iso_forest_reg();
 
 // classification models
 
@@ -238,6 +239,19 @@ extern void c_mlp_class()
     fprintf(fp, "\n");
     fprintf(fp, "model = MLPClassifier()\n");
     fprintf(fp, "model.fit(X_train, y_train)\n");
+    fprintf(fp, "model.coef_\n");
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "y_pred = model.predict(X_train)\n");
+    fprintf(fp, "y_pred\n");
+}
+
+extern void r_iso_forest_reg()
+{
+    fprintf(fp, CELL);
+    fprintf(fp, "\n");
+    fprintf(fp, "model = IsolationForest()\n");
+    fprintf(fp, "model.fit(X_train)\n");
     fprintf(fp, "model.coef_\n");
     fprintf(fp, CELL);
     fprintf(fp, "\n");
