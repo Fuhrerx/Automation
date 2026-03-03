@@ -22,6 +22,7 @@ char ans_pytorch[4];
 #include "../scikit/sk_imports.h"
 #include "../scikit/sk_models.h"
 #include "../py_torch/torch_imports.h"
+#include "start_prog.h"
 
 extern void str_lower(char *str)
 {
@@ -37,22 +38,12 @@ extern void str_lower(char *str)
 char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
-extern void start_prog();
 extern void dir_check();
 extern void base_imports();
 extern void ask_torch();
 extern void ask_sns();
 extern void ask_model();
 extern void scaler();
-
-extern void start_prog()
-{
-    printf("\n-----------------------------------------------------------\n");
-    printf("\n----MACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.2 (MLAuto)----\n");
-    printf("\n------Copyright (c) Akshay_babu, All rights reserved!------\n");
-    printf("\n----------Type 'exit' to exit from the program!------------\n");
-    printf("\n-----------------------------------------------------------\n");
-}
 
 extern void dir_check()
 {
@@ -130,6 +121,7 @@ extern void ask_torch()
     else
     {
         system("cls");
+        start_prog();
         printf("\n>> Invalid, PyTorch not imported : select again\n");
         ask_torch();
     }
@@ -225,6 +217,7 @@ extern void ask_model()
 
             default:
                 system("cls");
+                start_prog();
                 printf(">> Invalid, please enter again\n");
                 ask_model();
             }
@@ -270,6 +263,7 @@ extern void ask_model()
 
             default:
                 system("cls");
+                start_prog();
                 printf(">> Invalid, please enter again\n");
                 ask_model();
             }
@@ -282,6 +276,7 @@ extern void ask_model()
         else
         {
             system("cls");
+            start_prog();
             printf(">> Invalid input, please select again\n");
             ask_model();
         }
