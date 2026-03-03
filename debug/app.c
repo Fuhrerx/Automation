@@ -16,8 +16,6 @@
 
 int main(int argc, char *argv[])
 {
-    // ask_dir_name(); // TODO : ADD CUSTOM NAME AND PATH
-    // ask_dir_path();
     start_prog();
 
     dir_check();
