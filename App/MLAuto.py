@@ -24,14 +24,11 @@ if not os.path.exists(dll_path):
     print(f"Error: {dll_path} not found")
     sys.exit(1)
 
-# Execute the appropriate file using ctypes
 if sys.platform == "win32":
-    # On Windows, use ctypes to load the .dll file
     lib = ctypes.CDLL(dll_path)
     lib.app()
     sys.exit(0)
 else:
-    # On Unix/Linux, use ctypes to load the .so file
     lib = ctypes.CDLL(dll_path)
     lib.app()
     sys.exit(0)
