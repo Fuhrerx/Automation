@@ -38,8 +38,6 @@ char dir_name[25] = "python_automation";
 char relative_path[50] = "python_automation/model.py";
 
 extern void start_prog();
-extern void ask_dir_name();
-extern void ask_dir_path();
 extern void dir_check();
 extern void base_imports();
 extern void ask_torch();
@@ -54,28 +52,6 @@ extern void start_prog()
     printf("\n------Copyright (c) Akshay_babu, All rights reserved!------\n");
     printf("\n----------Type 'exit' to exit from the program!------------\n");
     printf("\n-----------------------------------------------------------\n");
-}
-
-extern void ask_dir_name()
-{
-    printf("\n>> Enter the name of the folder (copy and paste default name - python_automation) : \n");
-    scanf("%s", &dir_name);
-    if (strcmp(dir_name, "exit") == 0)
-    {
-        printf("\n>> Program Terminated!\n");
-        exit(1);
-    }
-}
-
-extern void ask_dir_path()
-{
-    printf("\n>> Enter the name (copy and paste default path - python_automation/model.py) : \n");
-    scanf("%s", &relative_path);
-    if (strcmp(relative_path, "exit") == 0)
-    {
-        printf("\n>> Program Terminated!\n");
-        exit(1);
-    }
 }
 
 extern void dir_check()
