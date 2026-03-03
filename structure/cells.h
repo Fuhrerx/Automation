@@ -137,6 +137,7 @@ extern void log_transform()
     else
     {
         system("cls");
+        start_prog();
         printf("\n>> Invalid input, please use yes or no\n");
         log_transform();
     }
@@ -306,6 +307,7 @@ extern void model_build()
 
             default:
                 system("cls");
+                start_prog();
                 printf(">> Not a valid model : choose again!");
                 model_build();
             }
@@ -340,6 +342,7 @@ extern void model_build()
 
             default:
                 system("cls");
+                start_prog();
                 printf(">> Invalid input, please input again");
                 model_build();
             }
