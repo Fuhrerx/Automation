@@ -66,6 +66,7 @@ int main(int argc, char *argv[])
     else if (strcmp(argv[1], "-r") == 0)
     {
         cli();
+
         return EXIT_SUCCESS;
     }
     else
