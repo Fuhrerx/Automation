@@ -12,10 +12,23 @@
 #include "../structure/PyList.h"
 #include "../structure/utils.h"
 
-int debug();
+bool file_exists(const char *filename);
 
-int debug()
+FILE *LIB_CHECK;
+
+bool file_exists(const char *filename)
 {
-
-    return 0;
+    FILE *file;
+    // Try to open the file in read mode ("r")
+    if ((file = fopen(filename, "r")) != NULL)
+    {
+        // If successful, the file exists and is readable. Close the file.
+        fclose(file);
+        return printf("\n>> File '%s' exists and is readable.\n", filename);
+    }
+    else
+    {
+        // If fopen returns NULL, the file does not exist or an error occurred.
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", filename);
+    }
 }
