@@ -23,53 +23,105 @@ bool debug()
     {
         printf("\n>> File '%s' exists and is readable.\n", app_h);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", app_h);
+    }
     if ((LIB_CHECK = fopen(app_dll, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", app_dll);
+    }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", app_dll);
     }
     if ((LIB_CHECK = fopen(main_so, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", main_so);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", main_so);
+    }
     if ((LIB_CHECK = fopen(MLAuto_exe, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", MLAuto_exe);
+    }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", MLAuto_exe);
     }
     if ((LIB_CHECK = fopen(MLAuto_c, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", MLAuto_c);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", MLAuto_c);
+    }
     if ((LIB_CHECK = fopen(MLAuto_py, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", MLAuto_py);
+    }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", MLAuto_py);
     }
     if ((LIB_CHECK = fopen(torch_imports_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", torch_imports_h);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", torch_imports_h);
+    }
     if ((LIB_CHECK = fopen(models_pytorch_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", models_pytorch_h);
+    }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", models_pytorch_h);
     }
     if ((LIB_CHECK = fopen(sk_imports_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", sk_imports_h);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", sk_imports_h);
+    }
     if ((LIB_CHECK = fopen(sk_models_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", sk_models_h);
+    }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", sk_models_h);
     }
     if ((LIB_CHECK = fopen(cells_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", cells_h);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", cells_h);
+    }
     if ((LIB_CHECK = fopen(markdown_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", markdown_h);
     }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", markdown_h);
+    }
     if ((LIB_CHECK = fopen(PyList_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", PyList_h);
+    }
+    else
+    {
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", PyList_h);
     }
     if ((LIB_CHECK = fopen(utils_h, "r")) != NULL)
     {
@@ -78,7 +130,6 @@ bool debug()
     }
     else
     {
-        // If fopen returns NULL, the file does not exist or an error occurred.
-        return printf("\n>> File '%s' does not exist or cannot be read.\n", app_h);
+        return printf("\n>> File '%s' does not exist or cannot be read.\n", utils_h);
     }
 }
