@@ -18,8 +18,67 @@
 #include <string.h>
 
 #include "../structure/utils.h"
+#include "../check/libcheck.h"
+
+int cli();
 
 int main(int argc, char *argv[])
+{
+    if (argc == 1)
+    {
+        printf("\n>> Welcome to MLAuto CLI!\n");
+        printf("\n>> Usage : \t./MLAuto [-flag]\n");
+        printf("\n>> For Flag info, use [-h] flag.\n");
+
+        return EXIT_SUCCESS;
+    }
+    else if (strcmp(argv[1], "-h") == 0)
+    {
+        printf("\n>> Help :\n");
+        printf("\n>> [-h]\t\tShow this help section\n");
+        printf("\n>> [-v]\t\tShow version info\n");
+        printf("\n>> [-d]\t\tDebug mode\n");
+        printf("\n>> [-w]\t\tWrite output to file\n");
+        printf("\n>> [-r]\t\tRead input from file\n");
+
+        return EXIT_SUCCESS;
+    }
+    else if (strcmp(argv[1], "-v") == 0)
+    {
+        printf("\n>> MLAuto Version : 1.3.2 (beta)\n");
+        printf("\n>> Copyright (c) Akshay_Babu, All rights reserved!\n");
+
+        return EXIT_SUCCESS;
+    }
+    else if (strcmp(argv[1], "-d") == 0)
+    {
+        printf("\n>> Debug mode activated!\n");
+        debug();
+
+        return EXIT_SUCCESS;
+    }
+    else if (strcmp(argv[1], "-w") == 0)
+    {
+        cli();
+
+        return EXIT_SUCCESS;
+    }
+    else if (strcmp(argv[1], "-r") == 0)
+    {
+        cli();
+        return EXIT_SUCCESS;
+    }
+    else
+    {
+        printf("\n>> Invalid flag! Use [-h] for help.\n");
+
+        return EXIT_FAILURE;
+    }
+
+    return 0;
+}
+
+int cli()
 {
     start_prog();
 
