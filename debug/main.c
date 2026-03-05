@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-v") == 0)
     {
-        printf("\n>> MLAuto Version : 1.3.2 (beta)\n");
+        printf("\n>> MLAuto Version : %s\n", VER);
         printf("\n>> Copyright (c) Akshay_Babu, All rights reserved!\n");
 
         return EXIT_SUCCESS;
