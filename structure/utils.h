@@ -10,6 +10,7 @@
 
 #define SIZE 250
 #define BUFF 100
+#define VER "1.3.2 (beta)"
 
 FILE *fp = NULL;
 
