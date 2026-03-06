@@ -13,6 +13,9 @@
 #include <string.h>
 
 #include "../structure/utils.h"
+#include "../check/libcheck.h"
+
+int cli();
 
 int main(int argc, char *argv[])
 {
