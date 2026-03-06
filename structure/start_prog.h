@@ -18,7 +18,7 @@ extern void start_prog();
 extern void start_prog()
 {
     printf("\n-----------------------------------------------------------\n");
-    printf("\n----MACHINE LEARNING PIPEPLINE AUTOMATOR 1.3.2 (MLAuto)----\n");
+    printf("\n----MACHINE LEARNING PIPEPLINE AUTOMATOR %s (MLAuto)----\n", VER_STRT);
     printf("\n------Copyright (c) Akshay_babu, All rights reserved!------\n");
     printf("\n----------Type 'exit' to exit from the program!------------\n");
     printf("\n-----------------------------------------------------------\n");
