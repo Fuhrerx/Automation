@@ -19,6 +19,8 @@ int cli();
 
 int main(int argc, char *argv[])
 {
+    start_prog();
+
     if (argc == 1)
     {
         printf("\n>> Welcome to MLAuto CLI!\n");
