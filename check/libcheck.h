@@ -160,5 +160,7 @@ bool debug()
         return false;
     }
 
+    printf("\n>> All 14 files exist and are readable. Debug check passed successfully!\n");
+
     return true;
 }
