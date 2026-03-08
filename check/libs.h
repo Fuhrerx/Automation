@@ -13,8 +13,9 @@
 #include "../structure/utils.h"
 
 // ../App files
-#define app_h "App/app.h"
+#define app_c "App/app.c"
 #define app_dll "App/app.dll"
+#define dll_h "App/dll.h"
 #define main_so "App/main.so"
 #define MLAuto_exe "App/MLAuto.exe"
 #define MLAuto_c "App/MLAuto.c"
