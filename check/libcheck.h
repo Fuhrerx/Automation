@@ -19,24 +19,24 @@ bool debug()
 {
     FILE *LIB_CHECK;
 
-    if ((LIB_CHECK = fopen(app_h, "r")) != NULL)
+    if ((LIB_CHECK = fopen(app_c, "r")) != NULL)
     {
-        printf("\n>> File '%s' exists and is readable.\n", app_h);
+        printf("\n>> File '%s' exists and is readable.\n", app_c);
         fclose(LIB_CHECK);
     }
     else
     {
-        printf("\n>> File '%s' does not exist or cannot be read.\n", app_h);
+        printf("\n>> File '%s' does not exist or cannot be read.\n", app_c);
         return false;
     }
-    if ((LIB_CHECK = fopen(app_dll, "r")) != NULL)
+    if ((LIB_CHECK = fopen(dll_h, "r")) != NULL)
     {
-        printf("\n>> File '%s' exists and is readable.\n", app_dll);
+        printf("\n>> File '%s' exists and is readable.\n", dll_h);
         fclose(LIB_CHECK);
     }
     else
     {
-        printf("\n>> File '%s' does not exist or cannot be read.\n", app_dll);
+        printf("\n>> File '%s' does not exist or cannot be read.\n", dll_h);
         return false;
     }
     if ((LIB_CHECK = fopen(main_so, "r")) != NULL)
