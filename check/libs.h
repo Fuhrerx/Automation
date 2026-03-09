@@ -1,3 +1,8 @@
+/*
+   This file consists of all the macros for the file paths essential for the libcheck.h file, add new file paths
+   if you add any new files
+*/
+
 #pragma once
 
 #include <stdio.h>
