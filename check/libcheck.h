@@ -1,3 +1,26 @@
+/*
+   This code checks for all the essential libraries/header files for the execution of the main file (MLAuto.c)
+   Currently the whole library/headers consists of 14 files :
+                                    -> App folder
+                                        - app.c
+                                        - app.dll
+                                        - dll.h
+                                        - main.so
+                                        - MLAuto.exe
+                                        - MLAuto.c
+                                        - MLAuto.py
+                                    -> Scikit folder
+                                        - sk_imports.h
+                                        - sk_models.h
+                                    -> Structure folder
+                                        - cells.h
+                                        - PyList.h
+                                        - utils.h
+                                    -> Torch folder
+                                        - torch_imports.h
+                                        - models_pytorch.h
+*/
+
 #pragma once
 
 #include <stdio.h>
