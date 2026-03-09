@@ -1,14 +1,14 @@
-//
-// Copyright (c) 2026 Akshay_Babu, All rights reserved.
-// This is : Build v1.3.3(beta), since its open source and under MIT Licence any edits or
-// alterations are allowed by the author for code resusablility
-// and workflow automation, please feel free to edit or report any
-// issues.
-//
-// Use this code to debug or test new features, otherwise to use as it is
-// go to :
-// ../Automation/App/MLAuto.exe to use it as a CLI APP
-//
+/*
+    Copyright (c) 2026 Akshay_Babu, All rights reserved.
+    This is : Build v1.3.3(beta), since its open source and under MIT Licence any edits or
+    alterations are allowed by the author for code resusablility
+    and workflow automation, please feel free to edit or report any
+    issues.
+
+    Use this code to debug or test new features, otherwise to use as it is
+    go to :
+    ../Automation/App/MLAuto.exe to use it as a CLI APP
+*/
 
 #include <stdio.h>
 #include <stdbool.h>
