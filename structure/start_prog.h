@@ -1,3 +1,7 @@
+/*
+    This file contains the function to start the program and display the welcome/title message
+*/
+
 #pragma once
 
 #include <stdio.h>
