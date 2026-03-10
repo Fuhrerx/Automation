@@ -1,8 +1,8 @@
-//
-// Use python naming rules for each python library imports
-//
-// For scikitlearn modules
-//
+/*
+    Use python naming rules for each python library imports
+
+    For scikitlearn modules
+*/
 
 #pragma once
 
