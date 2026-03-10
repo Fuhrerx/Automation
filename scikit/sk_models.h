@@ -1,6 +1,6 @@
-//
-// Please use "r_" for regression based models and "c_" for classification based models
-//
+/*
+    Please use "r_" for regression based models and "c_" for classification based models
+*/
 
 #pragma once
 
