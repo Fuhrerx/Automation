@@ -26,6 +26,9 @@
 #define MLAuto_c "App/MLAuto.c"
 #define MLAuto_py "App/MLAuto.py"
 
+// ../check files
+#define libs_h "check/libs.h"
+
 // ../py_torch files
 #define torch_imports_h "py_torch/torch_imports.h"
 #define models_pytorch_h "py_torch/models_pytorch.h"
@@ -38,4 +41,5 @@
 #define cells_h "structure/cells.h"
 #define markdown_h "structure/markdown.h"
 #define PyList_h "structure/PyList.h"
+#define start_prog_h "structure/start_prog.h"
 #define utils_h "structure/utils.h"
