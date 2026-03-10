@@ -40,6 +40,8 @@ bool debug();
 
 bool debug()
 {
+    printf("\n>> Starting debug checks for all essential files...\n");
+
     FILE *LIB_CHECK;
 
     if ((LIB_CHECK = fopen(app_c, "r")) != NULL)
@@ -102,6 +104,16 @@ bool debug()
         printf("\n>> File '%s' does not exist or cannot be read.\n", MLAuto_py);
         return false;
     }
+    if ((LIB_CHECK = fopen(libs_h, "r")) != NULL)
+    {
+        printf("\n>> File '%s' exists and is readable.\n", libs_h);
+        fclose(LIB_CHECK);
+    }
+    else
+    {
+        printf("\n>> File '%s' does not exist or cannot be read.\n", libs_h);
+        return false;
+    }
     if ((LIB_CHECK = fopen(torch_imports_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", torch_imports_h);
@@ -162,6 +174,16 @@ bool debug()
         printf("\n>> File '%s' does not exist or cannot be read.\n", markdown_h);
         return false;
     }
+    if ((LIB_CHECK = fopen(start_prog_h, "r")) != NULL)
+    {
+        printf("\n>> File '%s' exists and is readable.\n", start_prog_h);
+        fclose(LIB_CHECK);
+    }
+    else
+    {
+        printf("\n>> File '%s' does not exist or cannot be read.\n", start_prog_h);
+        return false;
+    }
     if ((LIB_CHECK = fopen(PyList_h, "r")) != NULL)
     {
         printf("\n>> File '%s' exists and is readable.\n", PyList_h);
@@ -183,7 +205,7 @@ bool debug()
         return false;
     }
 
-    printf("\n>> All 14 files exist and are readable. Debug check passed successfully!\n");
+    printf("\n>> All 17 files exist and are readable. Debug check passed successfully!\n");
 
     return true;
 }
