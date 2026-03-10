@@ -1,6 +1,7 @@
-//
-// Use list_(func name) naming for pylist creation
-//
+/*
+    Use list_(func name) naming for pylist creation
+*/
+
 #pragma once
 
 #include <stdio.h>
