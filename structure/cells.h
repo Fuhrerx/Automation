@@ -1,6 +1,6 @@
-//
-// Add functions in order for easier navigation
-//
+/*
+    Add functions in order for easier navigation
+*/
 
 #pragma once
 
