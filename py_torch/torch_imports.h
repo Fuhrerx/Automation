@@ -1,8 +1,8 @@
-//
-// Use python naming rules for each python library imports
-//
-// For Pytorch library modules
-//
+/*
+    Use python naming rules for each python library imports
+
+    For Pytorch library modules
+*/
 
 #pragma once
 
