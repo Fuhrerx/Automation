@@ -1,6 +1,7 @@
-//
-// Please follow m_(func_name) naming markdown functions
-//
+/*
+    Please follow m_(func_name) for naming markdown functions
+*/
+
 #pragma once
 
 #include <stdio.h>
