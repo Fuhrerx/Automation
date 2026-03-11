@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 {
     if (argc == 1)
     {
+        system("cls");
         title();
         printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> Usage : \t./MLAuto [-flag]\n");
@@ -35,6 +36,7 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-h") == 0)
     {
+        system("cls");
         title();
         printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> Help :\n");
@@ -48,6 +50,7 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-v") == 0)
     {
+        system("cls");
         title();
         printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> MLAuto Version : %s\n", VER);
@@ -57,6 +60,7 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-d") == 0)
     {
+        system("cls");
         title();
         printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> Debug mode activated!\n");
@@ -66,12 +70,14 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-w") == 0)
     {
+        system("cls");
         cli();
 
         return EXIT_SUCCESS;
     }
     else if (strcmp(argv[1], "-r") == 0)
     {
+        system("cls");
         printf("\n>> Read mode is under development, reverting to write mode\n");
         cli();
 
@@ -79,6 +85,7 @@ int main(int argc, char *argv[])
     }
     else
     {
+        system("cls");
         title();
         printf("\n>> Invalid flag! Use [-h] for help.\n");
 
