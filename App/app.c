@@ -20,7 +20,8 @@ MY_DLL_API int main(int argc, char *argv[])
 {
     if (argc == 1)
     {
-        start_prog();
+        system("cls");
+        title();
         printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> Usage : \t./MLAuto [-flag]\n");
         printf("\n>> For Flag info, use [-h] flag.\n");
@@ -29,7 +30,9 @@ MY_DLL_API int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-h") == 0)
     {
-        start_prog();
+        system("cls");
+        title();
+        printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> Help :\n");
         printf("\n>> [-h]\t\tShow this help section\n");
         printf("\n>> [-v]\t\tShow version info\n");
@@ -41,7 +44,9 @@ MY_DLL_API int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-v") == 0)
     {
-        start_prog();
+        system("cls");
+        title();
+        printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> MLAuto Version : %s\n", VER);
         printf("\n>> Copyright (c) Akshay_Babu, All rights reserved!\n");
 
@@ -49,7 +54,9 @@ MY_DLL_API int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-d") == 0)
     {
-        start_prog();
+        system("cls");
+        title();
+        printf("\n>> Welcome to MLAuto CLI!\n");
         printf("\n>> Debug mode activated!\n");
         debug();
 
@@ -57,12 +64,14 @@ MY_DLL_API int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-w") == 0)
     {
+        system("cls");
         cli();
 
         return EXIT_SUCCESS;
     }
     else if (strcmp(argv[1], "-r") == 0)
     {
+        system("cls");
         printf("\n>> Read mode is under development, reverting to write mode\n");
         cli();
 
@@ -70,6 +79,8 @@ MY_DLL_API int main(int argc, char *argv[])
     }
     else
     {
+        system("cls");
+        title();
         printf("\n>> Invalid flag! Use [-h] for help.\n");
 
         return EXIT_FAILURE;
