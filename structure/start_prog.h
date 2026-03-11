@@ -18,6 +18,7 @@
 #include "../py_torch/torch_imports.h"
 
 extern void start_prog();
+extern void title();
 
 extern void start_prog()
 {
@@ -25,5 +26,13 @@ extern void start_prog()
     printf("\n----MACHINE LEARNING PIPEPLINE AUTOMATOR %s (MLAuto)----\n", VER_STRT);
     printf("\n------Copyright (c) Akshay_babu, All rights reserved!------\n");
     printf("\n----------Type 'exit' to exit from the program!------------\n");
+    printf("\n-----------------------------------------------------------\n");
+}
+
+extern void title()
+{
+    printf("\n-----------------------------------------------------------\n");
+    printf("\n----MACHINE LEARNING PIPEPLINE AUTOMATOR %s (MLAuto)----\n", VER_STRT);
+    printf("\n------Copyright (c) Akshay_babu, All rights reserved!------\n");
     printf("\n-----------------------------------------------------------\n");
 }
