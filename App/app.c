@@ -1,5 +1,5 @@
 /*
-    For main.so creation, do not execute this file, instead execute the App/MLAuto.c in the App directory
+    For main.so creation, execute this file after major revisions, instead execute the App/MLAuto.c in the App directory
     and then run the command : `gcc -shared -o main.so -fPIC app.c` in the terminal to create the
     main.so file in the App directory, for 64 bit app.dll creation using msys2 terminal, use the command :
     `gcc -shared -o app.dll -Wl,--out-implib,libapp.a -fPIC app.c`
@@ -16,7 +16,7 @@
 #include "../structure/utils.h"
 #include "../check/libcheck.h"
 
-MY_DLL_API int main(int argc, char *argv[])
+DLL_API int main(int argc, char *argv[])
 {
     if (argc == 1)
     {
@@ -89,7 +89,7 @@ MY_DLL_API int main(int argc, char *argv[])
     return 0;
 }
 
-MY_DLL_API __declspec(dllexport) int cli()
+DLL_API __declspec(dllexport) int cli()
 {
     start_prog();
 
