@@ -1,3 +1,7 @@
+/*
+    This file contains all the necessary imports and functions for the program to run
+*/
+
 #pragma once
 
 #include <stdio.h>
