@@ -233,7 +233,7 @@ extern void ask_model()
         else if (strcmp(model, "2") == 0)
         {
             printf("\n>> What classification model are you planning to use : \n");
-            printf(">> Support Vector Machines (1)\n>> Decision tree classifier (2)\n>> Random forest classifier (3)\n>> K nearest neighbors (4)\n>> XGBoost classifier (5)\n>> Neural networks MLP (6)\n");
+            printf(">> Support Vector Machines (1)\n>> Decision tree classifier (2)\n>> Random forest classifier (3)\n>> K nearest neighbors (4)\n>> XGBoost classifier (5)\n>> Neural networks MLP (6)\n>> Isolation Forest (7)\n");
             printf(">> Choose : \n-- ");
             scanf("%d", &ans_class);
 
@@ -266,6 +266,11 @@ extern void ask_model()
 
             case 6:
                 fprintf(fp, mlp);
+                fprintf(fp, "\n");
+                break;
+
+            case 7:
+                fprintf(fp, iso_forest);
                 fprintf(fp, "\n");
                 break;
 
