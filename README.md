@@ -513,4 +513,5 @@ SOFTWARE.
 
 ---
 
+Current Codebase length : 2100+ lines of code (2108 lines total)
 _For questions or support, please open an issue on the project repository._
