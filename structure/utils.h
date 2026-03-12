@@ -114,6 +114,8 @@ extern void ask_torch()
     {
         fprintf(fp, torch);
         fprintf(fp, "\n");
+        fprintf(fp, torch_nn);
+        fprintf(fp, "\n");
     }
     else if (strcmp(ans_pytorch, "no") == 0)
     {
