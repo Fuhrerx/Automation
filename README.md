@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.3.3_beta-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Language](https://img.shields.io/badge/language-C-orange)
+![Language](https://img.shields.io/badge/language-C/Python-orange)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
 
 A powerful C-based command-line tool that automates the creation of complete Python machine learning pipelines. MLAuto generates production-ready ML code with interactive prompts, supporting both scikit-learn and PyTorch frameworks.
